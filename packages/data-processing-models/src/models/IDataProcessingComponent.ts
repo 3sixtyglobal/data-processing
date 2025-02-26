@@ -44,4 +44,25 @@ export interface IDataProcessingComponent extends IComponent {
 	 * @returns The converted data.
 	 */
 	convert(data: Uint8Array, overrideMimeType?: string): Promise<unknown>;
+
+	/**
+	 * Query the rule group entries.
+	 * @param cursor The cursor to request the next page of entities.
+	 * @param pageSize The maximum number of entities in a page.
+	 * @returns All the entities for the storage matching the conditions,
+	 * and a cursor which can be used to request more entities.
+	 */
+	query(
+		cursor?: string,
+		pageSize?: number
+	): Promise<{
+		/**
+		 * The entities, which can be partial if a limited keys list was provided.
+		 */
+		entities: IRuleGroup[];
+		/**
+		 * An optional cursor, when defined can be used to call find to get more entities.
+		 */
+		cursor?: string;
+	}>;
 }

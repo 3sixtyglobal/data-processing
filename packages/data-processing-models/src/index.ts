@@ -8,6 +8,8 @@ export * from "./models/api/IDataProcessingExtractRequest";
 export * from "./models/api/IDataProcessingExtractResponse";
 export * from "./models/api/IDataProcessingRuleGroupGetRequest";
 export * from "./models/api/IDataProcessingRuleGroupGetResponse";
+export * from "./models/api/IDataProcessingRuleGroupListRequest";
+export * from "./models/api/IDataProcessingRuleGroupListResponse";
 export * from "./models/api/IDataProcessingRuleGroupRemoveRequest";
 export * from "./models/api/IDataProcessingRuleGroupSetRequest";
 export * from "./models/IDataConverterConnector";

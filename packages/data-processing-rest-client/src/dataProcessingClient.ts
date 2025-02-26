@@ -11,6 +11,8 @@ import type {
 	IDataProcessingExtractResponse,
 	IDataProcessingRuleGroupGetRequest,
 	IDataProcessingRuleGroupGetResponse,
+	IDataProcessingRuleGroupListRequest,
+	IDataProcessingRuleGroupListResponse,
 	IDataProcessingRuleGroupRemoveRequest,
 	IDataProcessingRuleGroupSetRequest,
 	IRule,
@@ -54,7 +56,7 @@ export class DataProcessingClient extends BaseRestClient implements IDataProcess
 
 		await this.fetch<IDataProcessingRuleGroupSetRequest, INoContentResponse>(
 			"/rule-group/:id",
-			"POST",
+			"PUT",
 			{
 				pathParams: {
 					id: ruleGroup.id
@@ -157,5 +159,38 @@ export class DataProcessingClient extends BaseRestClient implements IDataProcess
 		);
 
 		return ObjectHelper.fromExtended(result.body);
+	}
+
+	/**
+	 * Query the rule group entries.
+	 * @param cursor The cursor to request the next page of entities.
+	 * @param pageSize The maximum number of entities in a page.
+	 * @returns All the entities for the storage matching the conditions,
+	 * and a cursor which can be used to request more entities.
+	 */
+	public async query(
+		cursor?: string,
+		pageSize?: number
+	): Promise<{
+		/**
+		 * The entities, which can be partial if a limited keys list was provided.
+		 */
+		entities: IRuleGroup[];
+		/**
+		 * An optional cursor, when defined can be used to call find to get more entities.
+		 */
+		cursor?: string;
+	}> {
+		const response = await this.fetch<
+			IDataProcessingRuleGroupListRequest,
+			IDataProcessingRuleGroupListResponse
+		>("/", "GET", {
+			query: {
+				cursor,
+				pageSize
+			}
+		});
+
+		return response.body;
 	}
 }

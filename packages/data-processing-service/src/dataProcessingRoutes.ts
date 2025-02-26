@@ -6,7 +6,7 @@ import type {
 	IRestRoute,
 	ITag
 } from "@twin.org/api-models";
-import { CoerceType, ComponentFactory, Converter, Guards } from "@twin.org/core";
+import { Coerce, CoerceType, ComponentFactory, Converter, Guards } from "@twin.org/core";
 import type {
 	IDataProcessingComponent,
 	IDataProcessingConvertRequest,
@@ -15,6 +15,8 @@ import type {
 	IDataProcessingExtractResponse,
 	IDataProcessingRuleGroupGetRequest,
 	IDataProcessingRuleGroupGetResponse,
+	IDataProcessingRuleGroupListRequest,
+	IDataProcessingRuleGroupListResponse,
 	IDataProcessingRuleGroupRemoveRequest,
 	IDataProcessingRuleGroupSetRequest,
 	IRule
@@ -254,7 +256,68 @@ export function generateRestRoutesDataProcessing(
 		]
 	};
 
-	return [setRuleGroupRoute, getRuleGroupRoute, removeRuleGroupRoute, extractRoute, convertRoute];
+	const getRuleGroupListRoute: IRestRoute<
+		IDataProcessingRuleGroupListRequest,
+		IDataProcessingRuleGroupListResponse
+	> = {
+		operationId: "dataProcessingListRuleGroup",
+		summary: "Get a list with rule groups for extraction.",
+		tag: tagsDataProcessing[0].name,
+		method: "GET",
+		path: `${baseRouteName}/rule-group`,
+		handler: async (httpRequestContext, request) =>
+			ruleGroupList(httpRequestContext, componentName, request),
+		requestType: {
+			type: nameof<IDataProcessingRuleGroupGetRequest>(),
+			examples: [
+				{
+					id: "ruleGroupListRequestExample",
+					request: {
+						query: {
+							pageSize: 10
+						}
+					}
+				}
+			]
+		},
+		responseType: [
+			{
+				type: nameof<IDataProcessingRuleGroupListResponse>(),
+				examples: [
+					{
+						id: "ruleGroupListResponseExample",
+						response: {
+							body: {
+								entities: [
+									{
+										id: "my-rule-group",
+										label: "My Rule Group",
+										rules: [
+											{
+												source: "$.foo",
+												target: "goo",
+												coerce: CoerceType.BigInt
+											}
+										]
+									}
+								],
+								cursor: "1"
+							}
+						}
+					}
+				]
+			}
+		]
+	};
+
+	return [
+		setRuleGroupRoute,
+		getRuleGroupRoute,
+		removeRuleGroupRoute,
+		extractRoute,
+		convertRoute,
+		getRuleGroupListRoute
+	];
 }
 
 /**
@@ -412,5 +475,28 @@ export async function dataProcessingConvert(
 
 	return {
 		body: result
+	};
+}
+
+/**
+ * Get a list of the rule group entries.
+ * @param httpRequestContext The request context for the API.
+ * @param componentName The name of the component to use in the routes.
+ * @param request The request.
+ * @returns The response object with additional http response properties.
+ */
+export async function ruleGroupList(
+	httpRequestContext: IHttpRequestContext,
+	componentName: string,
+	request: IDataProcessingRuleGroupListRequest
+): Promise<IDataProcessingRuleGroupListResponse> {
+	const component = ComponentFactory.get<IDataProcessingComponent>(componentName);
+
+	const itemsAndCursor = await component.query(
+		request?.query?.cursor,
+		Coerce.number(request?.query?.pageSize)
+	);
+	return {
+		body: itemsAndCursor
 	};
 }

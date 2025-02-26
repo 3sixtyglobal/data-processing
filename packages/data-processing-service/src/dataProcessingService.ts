@@ -4,11 +4,12 @@ import { GeneralError, Guards, Is, NotFoundError, ObjectHelper } from "@twin.org
 import {
 	DataConverterConnectorFactory,
 	DataExtractorConnectorFactory,
-	type IDataProcessingComponent,
 	type IDataExtractorConnector,
+	type IDataProcessingComponent,
 	type IRule,
 	type IRuleGroup
 } from "@twin.org/data-processing-models";
+import { SortDirection } from "@twin.org/entity";
 import {
 	EntityStorageConnectorFactory,
 	type IEntityStorageConnector
@@ -191,5 +192,44 @@ export class DataProcessingService implements IDataProcessingComponent {
 		}
 
 		return converter.convert(data);
+	}
+
+	/**
+	 * Query the rule group entries.
+	 * @param cursor The cursor to request the next page of entities.
+	 * @param pageSize The maximum number of entities in a page.
+	 * @returns All the entities for the storage matching the conditions,
+	 * and a cursor which can be used to request more entities.
+	 */
+	public async query(
+		cursor?: string,
+		pageSize?: number
+	): Promise<{
+		/**
+		 * The entities, which can be partial if a limited keys list was provided.
+		 */
+		entities: IRuleGroup[];
+		/**
+		 * An optional cursor, when defined can be used to call find to get more entities.
+		 */
+		cursor?: string;
+	}> {
+		const result = await this._extractionRuleGroupStorage.query(
+			undefined,
+			[
+				{
+					property: "id",
+					sortDirection: SortDirection.Descending
+				}
+			],
+			undefined,
+			cursor,
+			pageSize
+		);
+
+		return {
+			entities: result.entities as IRuleGroup[],
+			cursor: result.cursor
+		};
 	}
 }
