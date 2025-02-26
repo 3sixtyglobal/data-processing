@@ -184,7 +184,7 @@ export class DataProcessingClient extends BaseRestClient implements IDataProcess
 		const response = await this.fetch<
 			IDataProcessingRuleGroupListRequest,
 			IDataProcessingRuleGroupListResponse
-		>("/", "GET", {
+		>("/rule-group", "GET", {
 			query: {
 				cursor,
 				pageSize
