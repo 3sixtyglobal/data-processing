@@ -23,12 +23,12 @@ export class ExtractionRule {
 	/**
 	 * The retainPathDepth.
 	 */
-	@property({ type: "number" })
+	@property({ type: "number", optional: true })
 	public retainPathDepth?: number;
 
 	/**
 	 * The coercion to use.
 	 */
-	@property({ type: "string" })
+	@property({ type: "string", optional: true })
 	public coerce?: CoerceType;
 }
