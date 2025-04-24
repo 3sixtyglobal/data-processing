@@ -1,5 +1,22 @@
 # @twin.org/data-processing-service - Changelog
 
+## [0.0.1-next.13](https://github.com/twinfoundation/data-processing/compare/data-processing-service-v0.0.1-next.12...data-processing-service-v0.0.1-next.13) (2025-04-24)
+
+
+### Bug Fixes
+
+* locale properties ([dcff09f](https://github.com/twinfoundation/data-processing/commit/dcff09f00189b0cfa64968d55c6d2c01cdf8db79))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.0.1-next.12 to 0.0.1-next.13
+  * devDependencies
+    * @twin.org/data-processing-converters bumped from 0.0.1-next.12 to 0.0.1-next.13
+    * @twin.org/data-processing-extractors bumped from 0.0.1-next.12 to 0.0.1-next.13
+
 ## [0.0.1-next.12](https://github.com/twinfoundation/data-processing/compare/data-processing-service-v0.0.1-next.11...data-processing-service-v0.0.1-next.12) (2025-04-17)
 
 

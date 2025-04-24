@@ -1,5 +1,19 @@
 # @twin.org/data-processing-rest-client - Changelog
 
+## [0.0.1-next.13](https://github.com/twinfoundation/data-processing/compare/data-processing-rest-client-v0.0.1-next.12...data-processing-rest-client-v0.0.1-next.13) (2025-04-24)
+
+
+### Miscellaneous Chores
+
+* **data-processing-rest-client:** Synchronize repo versions
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.0.1-next.12 to 0.0.1-next.13
+
 ## [0.0.1-next.12](https://github.com/twinfoundation/data-processing/compare/data-processing-rest-client-v0.0.1-next.11...data-processing-rest-client-v0.0.1-next.12) (2025-04-17)
 
 

@@ -1,5 +1,12 @@
 # @twin.org/data-processing-models - Changelog
 
+## [0.0.1-next.13](https://github.com/twinfoundation/data-processing/compare/data-processing-models-v0.0.1-next.12...data-processing-models-v0.0.1-next.13) (2025-04-24)
+
+
+### Miscellaneous Chores
+
+* **data-processing-models:** Synchronize repo versions
+
 ## [0.0.1-next.12](https://github.com/twinfoundation/data-processing/compare/data-processing-models-v0.0.1-next.11...data-processing-models-v0.0.1-next.12) (2025-04-17)
 
 
