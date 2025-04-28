@@ -439,7 +439,8 @@ export async function dataProcessingExtract(
 	const result = await component.extract(
 		request.body.ruleGroupId,
 		Converter.base64ToBytes(request.body.data),
-		request.body.overrideExtractorType
+		request.body.overrideExtractorType,
+		request.body.overrideMimeType
 	);
 
 	return {

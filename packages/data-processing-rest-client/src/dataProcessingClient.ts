@@ -113,12 +113,14 @@ export class DataProcessingClient extends BaseRestClient implements IDataProcess
 	 * @param ruleGroupId The id of the rule group to use to extract data.
 	 * @param data The data to extract from.
 	 * @param overrideExtractorType An optional override for the extractor type.
+	 * @param overrideMimeType An optional override for the mime type for conversion, will auto detect if not provided.
 	 * @returns The extracted data.
 	 */
 	public async extract(
 		ruleGroupId: string,
 		data: Uint8Array,
-		overrideExtractorType?: string
+		overrideExtractorType?: string,
+		overrideMimeType?: string
 	): Promise<unknown> {
 		Guards.stringValue(this.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
 		Guards.uint8Array(this.CLASS_NAME, nameof(data), data);
@@ -130,7 +132,8 @@ export class DataProcessingClient extends BaseRestClient implements IDataProcess
 				body: {
 					ruleGroupId,
 					data: Converter.bytesToBase64(data),
-					overrideExtractorType
+					overrideExtractorType,
+					overrideMimeType
 				}
 			}
 		);

@@ -23,5 +23,10 @@ export interface IDataProcessingExtractRequest {
 		 * The default extractor connector will be used if not specified.
 		 */
 		overrideExtractorType?: string;
+
+		/**
+		 * An optional override for the mime type for conversion, will auto detect if not provided.
+		 */
+		overrideMimeType?: string;
 	};
 }

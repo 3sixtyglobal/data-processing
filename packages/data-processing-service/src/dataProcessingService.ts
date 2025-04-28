@@ -144,12 +144,14 @@ export class DataProcessingService implements IDataProcessingComponent {
 	 * @param ruleGroupId The id of the rule group to use to extract data.
 	 * @param data The data to extract from.
 	 * @param overrideExtractorType An optional override for the extractor type.
+	 * @param overrideMimeType An optional override for the mime type for conversion, will auto detect if not provided.
 	 * @returns The extracted data.
 	 */
 	public async extract(
 		ruleGroupId: string,
 		data: Uint8Array,
-		overrideExtractorType?: string
+		overrideExtractorType?: string,
+		overrideMimeType?: string
 	): Promise<unknown> {
 		Guards.stringValue(this.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
 		Guards.uint8Array(this.CLASS_NAME, nameof(data), data);
@@ -160,7 +162,7 @@ export class DataProcessingService implements IDataProcessingComponent {
 			throw new NotFoundError(this.CLASS_NAME, "ruleGroupNotFound", ruleGroupId);
 		}
 
-		const converted = await this.convert(data);
+		const converted = await this.convert(data, overrideMimeType);
 
 		const extractor = Is.empty(overrideExtractorType)
 			? this._extractorConnector

@@ -33,9 +33,15 @@ export interface IDataProcessingComponent extends IComponent {
 	 * @param ruleGroupId The id of the rule group to use to extract data.
 	 * @param data The data to extract from.
 	 * @param overrideExtractorType An optional override for the extractor type.
+	 * @param overrideMimeType An optional override for the mime type for conversion, will auto detect if not provided.
 	 * @returns The extracted data.
 	 */
-	extract(ruleGroupId: string, data: Uint8Array, overrideExtractorType?: string): Promise<unknown>;
+	extract(
+		ruleGroupId: string,
+		data: Uint8Array,
+		overrideExtractorType?: string,
+		overrideMimeType?: string
+	): Promise<unknown>;
 
 	/**
 	 * Converts data from the provided input to a structured JSON document.
