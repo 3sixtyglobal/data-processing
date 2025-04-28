@@ -1,5 +1,22 @@
 # @twin.org/data-processing-service - Changelog
 
+## [0.0.1-next.14](https://github.com/twinfoundation/data-processing/compare/data-processing-service-v0.0.1-next.13...data-processing-service-v0.0.1-next.14) (2025-04-28)
+
+
+### Features
+
+* pass the mimeTypeOverride through the component extract method ([#9](https://github.com/twinfoundation/data-processing/issues/9)) ([a2b36de](https://github.com/twinfoundation/data-processing/commit/a2b36de5c19c56e4172d3f22b176aa83e1df84c8))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.0.1-next.13 to 0.0.1-next.14
+  * devDependencies
+    * @twin.org/data-processing-converters bumped from 0.0.1-next.13 to 0.0.1-next.14
+    * @twin.org/data-processing-extractors bumped from 0.0.1-next.13 to 0.0.1-next.14
+
 ## [0.0.1-next.13](https://github.com/twinfoundation/data-processing/compare/data-processing-service-v0.0.1-next.12...data-processing-service-v0.0.1-next.13) (2025-04-24)
 
 
