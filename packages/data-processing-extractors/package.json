@@ -1,6 +1,6 @@
 {
 	"name": "@twin.org/data-processing-extractors",
-	"version": "0.0.1-next.14",
+	"version": "0.0.1-next.15",
 	"description": "Data extractor connector implementations",
 	"repository": {
 		"type": "git",
@@ -32,7 +32,7 @@
 	},
 	"dependencies": {
 		"@twin.org/core": "next",
-		"@twin.org/data-processing-models": "0.0.1-next.14",
+		"@twin.org/data-processing-models": "0.0.1-next.15",
 		"@twin.org/nameof": "next",
 		"@twin.org/web": "next",
 		"json-p3": "2.2.2"
