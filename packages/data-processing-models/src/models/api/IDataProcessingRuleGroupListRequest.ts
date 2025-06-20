@@ -17,6 +17,6 @@ export interface IDataProcessingRuleGroupListRequest {
 		/**
 		 * The maximum number of entities in a page.
 		 */
-		pageSize?: number;
+		pageSize?: number | string;
 	};
 }
