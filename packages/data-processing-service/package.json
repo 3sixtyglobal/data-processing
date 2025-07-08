@@ -1,6 +1,6 @@
 {
 	"name": "@twin.org/data-processing-service",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Data extractor connector implementations",
 	"repository": {
 		"type": "git",
@@ -34,14 +34,14 @@
 		"@twin.org/api-models": "^0.0.2-next.1",
 		"@twin.org/core": "^0.0.1",
 		"@twin.org/entity": "^0.0.1",
-		"@twin.org/data-processing-models": "^0.0.0",
+		"@twin.org/data-processing-models": "^0.0.1",
 		"@twin.org/entity-storage-models": "^0.0.1",
 		"@twin.org/nameof": "^0.0.1",
 		"@twin.org/web": "^0.0.1"
 	},
 	"devDependencies": {
-		"@twin.org/data-processing-converters": "^0.0.0",
-		"@twin.org/data-processing-extractors": "^0.0.0",
+		"@twin.org/data-processing-converters": "^0.0.1",
+		"@twin.org/data-processing-extractors": "^0.0.1",
 		"@twin.org/entity-storage-connector-memory": "^0.0.1",
 		"@twin.org/nameof-transformer": "^0.0.1",
 		"@twin.org/nameof-vitest-plugin": "^0.0.1",
