@@ -8,15 +8,23 @@ Class for extracting data from a JSON source.
 
 ## Constructors
 
-### new JsonPathExtractorConnector()
+### Constructor
 
-> **new JsonPathExtractorConnector**(): [`JsonPathExtractorConnector`](JsonPathExtractorConnector.md)
+> **new JsonPathExtractorConnector**(): `JsonPathExtractorConnector`
 
 #### Returns
 
-[`JsonPathExtractorConnector`](JsonPathExtractorConnector.md)
+`JsonPathExtractorConnector`
 
 ## Properties
+
+### NAMESPACE
+
+> `readonly` `static` **NAMESPACE**: `string` = `"json-path"`
+
+The namespace supported by the data extractor connector.
+
+***
 
 ### CLASS\_NAME
 
@@ -24,31 +32,35 @@ Class for extracting data from a JSON source.
 
 Runtime name for the class.
 
+#### Implementation of
+
+`IDataExtractorConnector.CLASS_NAME`
+
 ## Methods
 
 ### extract()
 
-> **extract**(`structuredData`, `extractRules`): `Promise`\<`IStructuredData`\>
+> **extract**(`data`, `rules`): `Promise`\<`unknown`\>
 
-Extracts data from the from the provided input.
+Extracts data from the provided input.
 
 #### Parameters
 
-##### structuredData
+##### data
 
-`IStructuredData`
+`unknown`
 
 The object to extract from.
 
-##### extractRules
+##### rules
 
-`IExtractRule`[]
+`IRule`[]
 
 The rules to use to extract the data.
 
 #### Returns
 
-`Promise`\<`IStructuredData`\>
+`Promise`\<`unknown`\>
 
 The extracted data.
 

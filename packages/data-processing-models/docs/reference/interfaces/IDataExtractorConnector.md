@@ -2,30 +2,34 @@
 
 Interface describing a connector for extracting data.
 
+## Extends
+
+- `IComponent`
+
 ## Methods
 
 ### extract()
 
-> **extract**(`structuredData`, `extractRules`): `Promise`\<[`IStructuredData`](IStructuredData.md)\>
+> **extract**(`data`, `rules`): `Promise`\<`unknown`\>
 
-Extracts data from the from the provided input.
+Extracts data from the provided input.
 
 #### Parameters
 
-##### structuredData
+##### data
 
-[`IStructuredData`](IStructuredData.md)
+`unknown`
 
 The object to extract from.
 
-##### extractRules
+##### rules
 
-[`IExtractRule`](IExtractRule.md)[]
+[`IRule`](IRule.md)[]
 
 The rules to use to extract the data.
 
 #### Returns
 
-`Promise`\<[`IStructuredData`](IStructuredData.md)\>
+`Promise`\<`unknown`\>
 
 The extracted data.

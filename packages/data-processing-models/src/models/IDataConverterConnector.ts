@@ -1,11 +1,11 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import type { IStructuredData } from "./IStructuredData";
+import type { IComponent } from "@twin.org/core";
 
 /**
  * Interface describing a connector for extracting data.
  */
-export interface IDataConverterConnector {
+export interface IDataConverterConnector extends IComponent {
 	/**
 	 * The MIME types that the converter can convert.
 	 * @returns The MIME types.
@@ -17,5 +17,5 @@ export interface IDataConverterConnector {
 	 * @param data The data to extract from.
 	 * @returns The extracted data.
 	 */
-	convert(data: Uint8Array): Promise<IStructuredData>;
+	convert(data: Uint8Array): Promise<unknown>;
 }

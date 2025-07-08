@@ -17,24 +17,7 @@
 		".eslintrc.cjs",
 		"**/wordlists/**"
 	],
-	"words": [
-		"cryptosuite",
-		"eddsa",
-		"Multibase",
-		"nameof",
-		"rdfc",
-		"Stiftung",
-		"epcis",
-		"unece",
-		"cefact",
-		"lgtin",
-		"epc",
-		"jaif",
-		"masterdata",
-		"iepc",
-		"sgln",
-		"sgtin"
-	],
+	"words": ["abbrev", "autorelease", "nameof", "Stiftung"],
 	"ignoreRegExpList": [
 		"/from\\s+(['\"]).*\\1/",
 		"/eslint-disable.*/",
