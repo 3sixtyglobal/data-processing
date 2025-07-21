@@ -24,11 +24,6 @@ import type { IDataProcessingServiceConstructorOptions } from "./models/IDataPro
  */
 export class DataProcessingService implements IDataProcessingComponent {
 	/**
-	 * The namespace supported by the data processing service.
-	 */
-	public static readonly NAMESPACE: string = "data-processing";
-
-	/**
 	 * Runtime name for the class.
 	 */
 	public readonly CLASS_NAME: string = nameof<DataProcessingService>();
