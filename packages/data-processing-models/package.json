@@ -65,5 +65,20 @@
 		"dist/types",
 		"locales",
 		"docs"
+	],
+	"keywords": [
+		"twin",
+		"trade",
+		"iota",
+		"framework",
+		"blockchain",
+		"data-processing",
+		"data",
+		"processing",
+		"transformation",
+		"conversion",
+		"models",
+		"types",
+		"schemas"
 	]
 }
