@@ -274,7 +274,7 @@ export function generateRestRoutesDataProcessing(
 					id: "ruleGroupListRequestExample",
 					request: {
 						query: {
-							pageSize: 10
+							limit: "10"
 						}
 					}
 				}
@@ -495,7 +495,7 @@ export async function ruleGroupList(
 
 	const itemsAndCursor = await component.query(
 		request?.query?.cursor,
-		Coerce.number(request?.query?.pageSize)
+		Coerce.number(request?.query?.limit)
 	);
 	return {
 		body: itemsAndCursor

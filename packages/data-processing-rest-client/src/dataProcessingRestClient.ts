@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0.
 import { BaseRestClient } from "@twin.org/api-core";
 import type { IBaseRestClientConfig, INoContentResponse } from "@twin.org/api-models";
-import { Converter, Guards, ObjectHelper } from "@twin.org/core";
+import { Coerce, Converter, Guards, ObjectHelper } from "@twin.org/core";
 import type {
 	IDataProcessingComponent,
 	IDataProcessingConvertRequest,
@@ -23,24 +23,18 @@ import { nameof } from "@twin.org/nameof";
 /**
  * Client for performing data processing through to REST endpoints.
  */
-export class DataProcessingClient extends BaseRestClient implements IDataProcessingComponent {
-	/**
-	 * Runtime name for the class.
-	 * @internal
-	 */
-	private static readonly _CLASS_NAME: string = nameof<DataProcessingClient>();
-
+export class DataProcessingRestClient extends BaseRestClient implements IDataProcessingComponent {
 	/**
 	 * Runtime name for the class.
 	 */
-	public readonly CLASS_NAME: string = DataProcessingClient._CLASS_NAME;
+	public static readonly CLASS_NAME: string = nameof<DataProcessingRestClient>();
 
 	/**
 	 * Create a new instance of DataProcessingClient.
 	 * @param config The configuration for the client.
 	 */
 	constructor(config: IBaseRestClientConfig) {
-		super(DataProcessingClient._CLASS_NAME, config, "data-processing");
+		super(DataProcessingRestClient.CLASS_NAME, config, "data-processing");
 	}
 
 	/**
@@ -49,10 +43,18 @@ export class DataProcessingClient extends BaseRestClient implements IDataProcess
 	 * @returns Nothing.
 	 */
 	public async ruleGroupSet(ruleGroup: IRuleGroup): Promise<void> {
-		Guards.object<IRuleGroup>(this.CLASS_NAME, nameof(ruleGroup), ruleGroup);
-		Guards.stringValue(this.CLASS_NAME, nameof(ruleGroup.id), ruleGroup.id);
-		Guards.stringValue(this.CLASS_NAME, nameof(ruleGroup.label), ruleGroup.label);
-		Guards.array<IRule>(this.CLASS_NAME, nameof(ruleGroup.rules), ruleGroup.rules);
+		Guards.object<IRuleGroup>(DataProcessingRestClient.CLASS_NAME, nameof(ruleGroup), ruleGroup);
+		Guards.stringValue(DataProcessingRestClient.CLASS_NAME, nameof(ruleGroup.id), ruleGroup.id);
+		Guards.stringValue(
+			DataProcessingRestClient.CLASS_NAME,
+			nameof(ruleGroup.label),
+			ruleGroup.label
+		);
+		Guards.array<IRule>(
+			DataProcessingRestClient.CLASS_NAME,
+			nameof(ruleGroup.rules),
+			ruleGroup.rules
+		);
 
 		await this.fetch<IDataProcessingRuleGroupSetRequest, INoContentResponse>(
 			"/rule-group/:id",
@@ -75,7 +77,7 @@ export class DataProcessingClient extends BaseRestClient implements IDataProcess
 	 * @returns The rule group.
 	 */
 	public async ruleGroupGet(ruleGroupId: string): Promise<IRuleGroup> {
-		Guards.stringValue(this.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
+		Guards.stringValue(DataProcessingRestClient.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
 
 		const response = await this.fetch<
 			IDataProcessingRuleGroupGetRequest,
@@ -95,7 +97,7 @@ export class DataProcessingClient extends BaseRestClient implements IDataProcess
 	 * @returns Nothing.
 	 */
 	public async ruleGroupRemove(ruleGroupId: string): Promise<void> {
-		Guards.stringValue(this.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
+		Guards.stringValue(DataProcessingRestClient.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
 
 		await this.fetch<IDataProcessingRuleGroupRemoveRequest, INoContentResponse>(
 			"/rule-group/:id",
@@ -122,8 +124,8 @@ export class DataProcessingClient extends BaseRestClient implements IDataProcess
 		overrideExtractorType?: string,
 		overrideMimeType?: string
 	): Promise<unknown> {
-		Guards.stringValue(this.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
-		Guards.uint8Array(this.CLASS_NAME, nameof(data), data);
+		Guards.stringValue(DataProcessingRestClient.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
+		Guards.uint8Array(DataProcessingRestClient.CLASS_NAME, nameof(data), data);
 
 		const result = await this.fetch<IDataProcessingExtractRequest, IDataProcessingExtractResponse>(
 			"/extract",
@@ -148,7 +150,7 @@ export class DataProcessingClient extends BaseRestClient implements IDataProcess
 	 * @returns The converted data.
 	 */
 	public async convert(data: Uint8Array, overrideMimeType?: string): Promise<unknown> {
-		Guards.uint8Array(this.CLASS_NAME, nameof(data), data);
+		Guards.uint8Array(DataProcessingRestClient.CLASS_NAME, nameof(data), data);
 
 		const result = await this.fetch<IDataProcessingConvertRequest, IDataProcessingConvertResponse>(
 			"/convert",
@@ -166,14 +168,14 @@ export class DataProcessingClient extends BaseRestClient implements IDataProcess
 
 	/**
 	 * Query the rule group entries.
-	 * @param cursor The cursor to request the next page of entities.
-	 * @param pageSize The maximum number of entities in a page.
+	 * @param cursor The cursor to request the next chunk of entities.
+	 * @param limit Limit the number of entities to return.
 	 * @returns All the entities for the storage matching the conditions,
 	 * and a cursor which can be used to request more entities.
 	 */
 	public async query(
 		cursor?: string,
-		pageSize?: number
+		limit?: number
 	): Promise<{
 		/**
 		 * The entities, which can be partial if a limited keys list was provided.
@@ -190,7 +192,7 @@ export class DataProcessingClient extends BaseRestClient implements IDataProcess
 		>("/rule-group", "GET", {
 			query: {
 				cursor,
-				pageSize
+				limit: Coerce.string(limit)
 			}
 		});
 

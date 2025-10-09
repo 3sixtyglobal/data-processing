@@ -26,7 +26,7 @@ export class DataProcessingService implements IDataProcessingComponent {
 	/**
 	 * Runtime name for the class.
 	 */
-	public readonly CLASS_NAME: string = nameof<DataProcessingService>();
+	public static readonly CLASS_NAME: string = nameof<DataProcessingService>();
 
 	/**
 	 * The entity storage for the extraction rule groups.
@@ -56,7 +56,7 @@ export class DataProcessingService implements IDataProcessingComponent {
 			if (names.length > 0) {
 				this._extractorConnector = DataExtractorConnectorFactory.get(names[0]);
 			} else {
-				throw new GeneralError(this.CLASS_NAME, "noExtractorFound");
+				throw new GeneralError(DataProcessingService.CLASS_NAME, "noExtractorFound");
 			}
 		}
 	}
@@ -67,14 +67,14 @@ export class DataProcessingService implements IDataProcessingComponent {
 	 * @returns Nothing.
 	 */
 	public async ruleGroupSet(ruleGroup: IRuleGroup): Promise<void> {
-		Guards.object<IRuleGroup>(this.CLASS_NAME, nameof(ruleGroup), ruleGroup);
-		Guards.stringValue(this.CLASS_NAME, nameof(ruleGroup.id), ruleGroup.id);
-		Guards.stringValue(this.CLASS_NAME, nameof(ruleGroup.label), ruleGroup.label);
-		Guards.array<IRule>(this.CLASS_NAME, nameof(ruleGroup.rules), ruleGroup.rules);
+		Guards.object<IRuleGroup>(DataProcessingService.CLASS_NAME, nameof(ruleGroup), ruleGroup);
+		Guards.stringValue(DataProcessingService.CLASS_NAME, nameof(ruleGroup.id), ruleGroup.id);
+		Guards.stringValue(DataProcessingService.CLASS_NAME, nameof(ruleGroup.label), ruleGroup.label);
+		Guards.array<IRule>(DataProcessingService.CLASS_NAME, nameof(ruleGroup.rules), ruleGroup.rules);
 
 		for (const rule of ruleGroup.rules) {
-			Guards.stringValue(this.CLASS_NAME, nameof(rule.source), rule.source);
-			Guards.stringValue(this.CLASS_NAME, nameof(rule.target), rule.source);
+			Guards.stringValue(DataProcessingService.CLASS_NAME, nameof(rule.source), rule.source);
+			Guards.stringValue(DataProcessingService.CLASS_NAME, nameof(rule.target), rule.source);
 		}
 
 		const extractionRuleGroup: ExtractionRuleGroup = {
@@ -97,12 +97,12 @@ export class DataProcessingService implements IDataProcessingComponent {
 	 * @returns The rule group.
 	 */
 	public async ruleGroupGet(ruleGroupId: string): Promise<IRuleGroup> {
-		Guards.stringValue(this.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
+		Guards.stringValue(DataProcessingService.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
 
 		const extractRuleGroup = await this._extractionRuleGroupStorage.get(ruleGroupId);
 
 		if (Is.empty(extractRuleGroup)) {
-			throw new NotFoundError(this.CLASS_NAME, "ruleGroupNotFound", ruleGroupId);
+			throw new NotFoundError(DataProcessingService.CLASS_NAME, "ruleGroupNotFound", ruleGroupId);
 		}
 
 		return {
@@ -123,12 +123,12 @@ export class DataProcessingService implements IDataProcessingComponent {
 	 * @returns Nothing.
 	 */
 	public async ruleGroupRemove(ruleGroupId: string): Promise<void> {
-		Guards.stringValue(this.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
+		Guards.stringValue(DataProcessingService.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
 
 		const extractRuleGroup = await this._extractionRuleGroupStorage.get(ruleGroupId);
 
 		if (Is.empty(extractRuleGroup)) {
-			throw new NotFoundError(this.CLASS_NAME, "ruleGroupNotFound", ruleGroupId);
+			throw new NotFoundError(DataProcessingService.CLASS_NAME, "ruleGroupNotFound", ruleGroupId);
 		}
 
 		await this._extractionRuleGroupStorage.remove(ruleGroupId);
@@ -148,13 +148,13 @@ export class DataProcessingService implements IDataProcessingComponent {
 		overrideExtractorType?: string,
 		overrideMimeType?: string
 	): Promise<unknown> {
-		Guards.stringValue(this.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
-		Guards.uint8Array(this.CLASS_NAME, nameof(data), data);
+		Guards.stringValue(DataProcessingService.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
+		Guards.uint8Array(DataProcessingService.CLASS_NAME, nameof(data), data);
 
 		const extractRuleGroup = await this._extractionRuleGroupStorage.get(ruleGroupId);
 
 		if (Is.empty(extractRuleGroup)) {
-			throw new NotFoundError(this.CLASS_NAME, "ruleGroupNotFound", ruleGroupId);
+			throw new NotFoundError(DataProcessingService.CLASS_NAME, "ruleGroupNotFound", ruleGroupId);
 		}
 
 		const converted = await this.convert(data, overrideMimeType);
@@ -174,18 +174,18 @@ export class DataProcessingService implements IDataProcessingComponent {
 	 * @returns The converted data.
 	 */
 	public async convert(data: Uint8Array, overrideMimeType?: string): Promise<unknown> {
-		Guards.uint8Array(this.CLASS_NAME, nameof(data), data);
+		Guards.uint8Array(DataProcessingService.CLASS_NAME, nameof(data), data);
 
 		const mimeType = overrideMimeType ?? (await MimeTypeHelper.detect(data));
 		if (Is.empty(mimeType)) {
-			throw new GeneralError(this.CLASS_NAME, "mimeTypeNotFound");
+			throw new GeneralError(DataProcessingService.CLASS_NAME, "mimeTypeNotFound");
 		}
 
 		const converters = DataConverterConnectorFactory.instancesList();
 
 		const converter = converters.find(c => c.mimeTypes().includes(mimeType));
 		if (Is.empty(converter)) {
-			throw new NotFoundError(this.CLASS_NAME, "converterNotFound", mimeType);
+			throw new NotFoundError(DataProcessingService.CLASS_NAME, "converterNotFound", mimeType);
 		}
 
 		return converter.convert(data);
@@ -193,14 +193,14 @@ export class DataProcessingService implements IDataProcessingComponent {
 
 	/**
 	 * Query the rule group entries.
-	 * @param cursor The cursor to request the next page of entities.
-	 * @param pageSize The maximum number of entities in a page.
+	 * @param cursor The cursor to request the next chunk of entities.
+	 * @param limit Limit the number of entities to return.
 	 * @returns All the entities for the storage matching the conditions,
 	 * and a cursor which can be used to request more entities.
 	 */
 	public async query(
 		cursor?: string,
-		pageSize?: number
+		limit?: number
 	): Promise<{
 		/**
 		 * The entities, which can be partial if a limited keys list was provided.
@@ -221,7 +221,7 @@ export class DataProcessingService implements IDataProcessingComponent {
 			],
 			undefined,
 			cursor,
-			pageSize
+			limit
 		);
 
 		return {

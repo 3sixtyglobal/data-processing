@@ -1,4 +1,4 @@
-# Class: DataProcessingClient
+# Class: DataProcessingRestClient
 
 Client for performing data processing through to REST endpoints.
 
@@ -14,7 +14,7 @@ Client for performing data processing through to REST endpoints.
 
 ### Constructor
 
-> **new DataProcessingClient**(`config`): `DataProcessingClient`
+> **new DataProcessingRestClient**(`config`): `DataProcessingRestClient`
 
 Create a new instance of DataProcessingClient.
 
@@ -28,7 +28,7 @@ The configuration for the client.
 
 #### Returns
 
-`DataProcessingClient`
+`DataProcessingRestClient`
 
 #### Overrides
 
@@ -38,13 +38,9 @@ The configuration for the client.
 
 ### CLASS\_NAME
 
-> `readonly` **CLASS\_NAME**: `string` = `DataProcessingClient._CLASS_NAME`
+> `readonly` `static` **CLASS\_NAME**: `string`
 
 Runtime name for the class.
-
-#### Implementation of
-
-`IDataProcessingComponent.CLASS_NAME`
 
 ## Methods
 
@@ -204,7 +200,7 @@ The converted data.
 
 ### query()
 
-> **query**(`cursor?`, `pageSize?`): `Promise`\<\{ `entities`: `IRuleGroup`[]; `cursor?`: `string`; \}\>
+> **query**(`cursor?`, `limit?`): `Promise`\<\{ `entities`: `IRuleGroup`[]; `cursor?`: `string`; \}\>
 
 Query the rule group entries.
 
@@ -214,13 +210,13 @@ Query the rule group entries.
 
 `string`
 
-The cursor to request the next page of entities.
+The cursor to request the next chunk of entities.
 
-##### pageSize?
+##### limit?
 
 `number`
 
-The maximum number of entities in a page.
+Limit the number of entities to return.
 
 #### Returns
 

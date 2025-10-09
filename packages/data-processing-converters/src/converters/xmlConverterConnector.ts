@@ -18,7 +18,7 @@ export class XmlConverterConnector implements IDataConverterConnector {
 	/**
 	 * Runtime name for the class.
 	 */
-	public readonly CLASS_NAME: string = nameof<XmlConverterConnector>();
+	public static readonly CLASS_NAME: string = nameof<XmlConverterConnector>();
 
 	/**
 	 * The MIME types that the converter can convert.
@@ -34,7 +34,7 @@ export class XmlConverterConnector implements IDataConverterConnector {
 	 * @returns The extracted data.
 	 */
 	public async convert(data: Uint8Array): Promise<unknown> {
-		Guards.uint8Array(this.CLASS_NAME, nameof(data), data);
+		Guards.uint8Array(XmlConverterConnector.CLASS_NAME, nameof(data), data);
 
 		let converted = {};
 
@@ -49,7 +49,7 @@ export class XmlConverterConnector implements IDataConverterConnector {
 
 				converted = result ?? {};
 			} catch (error) {
-				throw new GeneralError(this.CLASS_NAME, "invalidFormat", {
+				throw new GeneralError(XmlConverterConnector.CLASS_NAME, "invalidFormat", {
 					failure: BaseError.fromError(error).message.split("\n").join(" ")
 				});
 			}

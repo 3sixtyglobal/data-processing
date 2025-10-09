@@ -17,7 +17,7 @@ export class JsonPathExtractorConnector implements IDataExtractorConnector {
 	/**
 	 * Runtime name for the class.
 	 */
-	public readonly CLASS_NAME: string = nameof<JsonPathExtractorConnector>();
+	public static readonly CLASS_NAME: string = nameof<JsonPathExtractorConnector>();
 
 	/**
 	 * Extracts data from the provided input.
@@ -26,8 +26,8 @@ export class JsonPathExtractorConnector implements IDataExtractorConnector {
 	 * @returns The extracted data.
 	 */
 	public async extract(data: unknown, rules: IRule[]): Promise<unknown> {
-		Guards.object(this.CLASS_NAME, nameof(data), data);
-		Guards.array(this.CLASS_NAME, nameof(rules), rules);
+		Guards.object(JsonPathExtractorConnector.CLASS_NAME, nameof(data), data);
+		Guards.array(JsonPathExtractorConnector.CLASS_NAME, nameof(rules), rules);
 
 		const outputObject: unknown = {};
 
@@ -61,7 +61,7 @@ export class JsonPathExtractorConnector implements IDataExtractorConnector {
 				);
 			}
 		} catch (err) {
-			throw new GeneralError(this.CLASS_NAME, "invalidRule", {
+			throw new GeneralError(JsonPathExtractorConnector.CLASS_NAME, "invalidRule", {
 				rule: rule.source,
 				reason: BaseError.fromError(err).message
 			});

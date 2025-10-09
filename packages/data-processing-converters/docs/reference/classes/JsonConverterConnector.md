@@ -28,13 +28,9 @@ The namespace supported by the data converter connector.
 
 ### CLASS\_NAME
 
-> `readonly` **CLASS\_NAME**: `string`
+> `readonly` `static` **CLASS\_NAME**: `string`
 
 Runtime name for the class.
-
-#### Implementation of
-
-`IDataConverterConnector.CLASS_NAME`
 
 ## Methods
 
