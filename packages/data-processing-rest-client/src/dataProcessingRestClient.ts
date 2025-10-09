@@ -30,7 +30,7 @@ export class DataProcessingRestClient extends BaseRestClient implements IDataPro
 	public static readonly CLASS_NAME: string = nameof<DataProcessingRestClient>();
 
 	/**
-	 * Create a new instance of DataProcessingRestClient
+	 * Create a new instance of DataProcessingRestClient.
 	 * @param config The configuration for the client.
 	 */
 	constructor(config: IBaseRestClientConfig) {
