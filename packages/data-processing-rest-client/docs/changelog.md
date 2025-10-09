@@ -1,5 +1,19 @@
 # @twin.org/data-processing-rest-client - Changelog
 
+## [0.0.2-next.3](https://github.com/twinfoundation/data-processing/compare/data-processing-rest-client-v0.0.2-next.2...data-processing-rest-client-v0.0.2-next.3) (2025-10-09)
+
+
+### Features
+
+* add validate-locales ([9af0874](https://github.com/twinfoundation/data-processing/commit/9af0874cd3f44a4cfca514dde8380f002e62337e))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.0.2-next.2 to 0.0.2-next.3
+
 ## [0.0.2-next.2](https://github.com/twinfoundation/data-processing/compare/data-processing-rest-client-v0.0.2-next.1...data-processing-rest-client-v0.0.2-next.2) (2025-08-29)
 
 

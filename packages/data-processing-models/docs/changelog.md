@@ -1,5 +1,12 @@
 # @twin.org/data-processing-models - Changelog
 
+## [0.0.2-next.3](https://github.com/twinfoundation/data-processing/compare/data-processing-models-v0.0.2-next.2...data-processing-models-v0.0.2-next.3) (2025-10-09)
+
+
+### Features
+
+* add validate-locales ([9af0874](https://github.com/twinfoundation/data-processing/commit/9af0874cd3f44a4cfca514dde8380f002e62337e))
+
 ## [0.0.2-next.2](https://github.com/twinfoundation/data-processing/compare/data-processing-models-v0.0.2-next.1...data-processing-models-v0.0.2-next.2) (2025-08-29)
 
 
