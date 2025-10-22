@@ -1,5 +1,19 @@
 # @twin.org/data-processing-extractors - Changelog
 
+## [0.0.2-next.4](https://github.com/twinfoundation/data-processing/compare/data-processing-extractors-v0.0.2-next.3...data-processing-extractors-v0.0.2-next.4) (2025-10-22)
+
+
+### Bug Fixes
+
+* supporting array usage ([#20](https://github.com/twinfoundation/data-processing/issues/20)) ([d2c68cd](https://github.com/twinfoundation/data-processing/commit/d2c68cd3983622586cc073377545d6416b87a827))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.0.2-next.3 to 0.0.2-next.4
+
 ## [0.0.2-next.3](https://github.com/twinfoundation/data-processing/compare/data-processing-extractors-v0.0.2-next.2...data-processing-extractors-v0.0.2-next.3) (2025-10-09)
 
 
