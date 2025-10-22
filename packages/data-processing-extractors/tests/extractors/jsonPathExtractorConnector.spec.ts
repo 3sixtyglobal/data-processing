@@ -151,4 +151,38 @@ describe("JsonPathExtractorConnector", () => {
 			}
 		});
 	});
+
+	test("Can correctly retain a single value from wildcard array extraction", async () => {
+		const extractor = new JsonPathExtractorConnector();
+		const output = await extractor.extract(
+			{
+				store: {
+					books: [{ title: "The Hobbit", author: "J.R.R. Tolkien", price: 12.99 }]
+				}
+			},
+			[{ source: "$.store.books[*].title", target: "bookTitles" }]
+		);
+		expect(output).toEqual({
+			bookTitles: ["The Hobbit"]
+		});
+	});
+
+	test("Can correctly accumulate multiple values from wildcard array extraction", async () => {
+		const extractor = new JsonPathExtractorConnector();
+		const output = await extractor.extract(
+			{
+				store: {
+					books: [
+						{ title: "The Hobbit", author: "J.R.R. Tolkien", price: 12.99 },
+						{ title: "1984", author: "George Orwell", price: 8.99 },
+						{ title: "Dune", author: "Frank Herbert", price: 15.5 }
+					]
+				}
+			},
+			[{ source: "$.store.books[*].title", target: "bookTitles" }]
+		);
+		expect(output).toEqual({
+			bookTitles: ["The Hobbit", "1984", "Dune"]
+		});
+	});
 });

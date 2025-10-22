@@ -16,7 +16,7 @@ Client for performing data processing through to REST endpoints.
 
 > **new DataProcessingRestClient**(`config`): `DataProcessingRestClient`
 
-Create a new instance of DataProcessingClient.
+Create a new instance of DataProcessingRestClient.
 
 #### Parameters
 
