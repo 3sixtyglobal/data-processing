@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: Apache-2.0.
 import { EntitySchemaFactory, EntitySchemaHelper } from "@twin.org/entity";
 import { nameof } from "@twin.org/nameof";
-import { ExtractionRule } from "./entities/extractionRule";
-import { ExtractionRuleGroup } from "./entities/extractionRuleGroup";
+import { ExtractionRule } from "./entities/extractionRule.js";
+import { ExtractionRuleGroup } from "./entities/extractionRuleGroup.js";
 
 /**
  * Initialize the schema for the data extraction connector entity storage.

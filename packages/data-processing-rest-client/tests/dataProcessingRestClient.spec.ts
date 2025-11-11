@@ -1,6 +1,6 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import { DataProcessingRestClient } from "../src/dataProcessingRestClient";
+import { DataProcessingRestClient } from "../src/dataProcessingRestClient.js";
 
 describe("DataProcessingRestClient", () => {
 	test("Can create an instance", async () => {

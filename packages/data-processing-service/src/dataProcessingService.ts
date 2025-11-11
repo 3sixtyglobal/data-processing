@@ -16,8 +16,8 @@ import {
 } from "@twin.org/entity-storage-models";
 import { nameof } from "@twin.org/nameof";
 import { MimeTypeHelper } from "@twin.org/web";
-import type { ExtractionRuleGroup } from "./entities/extractionRuleGroup";
-import type { IDataProcessingServiceConstructorOptions } from "./models/IDataProcessingServiceConstructorOptions";
+import type { ExtractionRuleGroup } from "./entities/extractionRuleGroup.js";
+import type { IDataProcessingServiceConstructorOptions } from "./models/IDataProcessingServiceConstructorOptions.js";
 
 /**
  * Class for processing data from a source.
@@ -59,6 +59,14 @@ export class DataProcessingService implements IDataProcessingComponent {
 				throw new GeneralError(DataProcessingService.CLASS_NAME, "noExtractorFound");
 			}
 		}
+	}
+
+	/**
+	 * Returns the class name of the component.
+	 * @returns The class name of the component.
+	 */
+	public className(): string {
+		return DataProcessingService.CLASS_NAME;
 	}
 
 	/**

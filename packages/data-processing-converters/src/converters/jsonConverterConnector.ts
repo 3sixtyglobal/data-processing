@@ -20,6 +20,14 @@ export class JsonConverterConnector implements IDataConverterConnector {
 	public static readonly CLASS_NAME: string = nameof<JsonConverterConnector>();
 
 	/**
+	 * Returns the class name of the component.
+	 * @returns The class name of the component.
+	 */
+	public className(): string {
+		return JsonConverterConnector.CLASS_NAME;
+	}
+
+	/**
 	 * The MIME types that the converter can convert.
 	 * @returns The MIME types.
 	 */

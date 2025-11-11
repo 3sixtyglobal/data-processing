@@ -1,9 +1,9 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 import { BaseError, Coerce, GeneralError, Guards, Is, ObjectHelper } from "@twin.org/core";
+import { JsonPathHelper } from "@twin.org/data-json-path";
 import type { IDataExtractorConnector, IRule } from "@twin.org/data-processing-models";
 import { nameof } from "@twin.org/nameof";
-import { type JSONValue, query } from "json-p3";
 
 /**
  * Class for extracting data from a JSON source.
@@ -18,6 +18,14 @@ export class JsonPathExtractorConnector implements IDataExtractorConnector {
 	 * Runtime name for the class.
 	 */
 	public static readonly CLASS_NAME: string = nameof<JsonPathExtractorConnector>();
+
+	/**
+	 * Returns the class name of the component.
+	 * @returns The class name of the component.
+	 */
+	public className(): string {
+		return JsonPathExtractorConnector.CLASS_NAME;
+	}
 
 	/**
 	 * Extracts data from the provided input.
@@ -47,7 +55,7 @@ export class JsonPathExtractorConnector implements IDataExtractorConnector {
 	 */
 	private extractValue(jsonObject: unknown, rule: IRule, outputObject: unknown): void {
 		try {
-			const jsonNodes = query(rule.source, jsonObject as JSONValue);
+			const jsonNodes = JsonPathHelper.query(rule.source, jsonObject);
 
 			const ruleParts = rule.source.split(".");
 
@@ -92,10 +100,14 @@ export class JsonPathExtractorConnector implements IDataExtractorConnector {
 				ObjectHelper.propertySet(outputObject, path, values);
 			}
 		} catch (err) {
-			throw new GeneralError(JsonPathExtractorConnector.CLASS_NAME, "invalidRule", {
-				rule: rule.source,
-				reason: BaseError.fromError(err).message
-			});
+			throw new GeneralError(
+				JsonPathExtractorConnector.CLASS_NAME,
+				"invalidRule",
+				{
+					rule: rule.source
+				},
+				BaseError.fromError(err)
+			);
 		}
 	}
 }

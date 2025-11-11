@@ -1,9 +1,9 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-export * from "./dataProcessingRoutes";
-export * from "./dataProcessingService";
-export * from "./entities/extractionRule";
-export * from "./entities/extractionRuleGroup";
-export * from "./models/IDataProcessingServiceConstructorOptions";
-export * from "./restEntryPoints";
-export * from "./schema";
+export * from "./dataProcessingRoutes.js";
+export * from "./dataProcessingService.js";
+export * from "./entities/extractionRule.js";
+export * from "./entities/extractionRuleGroup.js";
+export * from "./models/IDataProcessingServiceConstructorOptions.js";
+export * from "./restEntryPoints.js";
+export * from "./schema.js";

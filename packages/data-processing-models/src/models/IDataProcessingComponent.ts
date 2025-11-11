@@ -1,7 +1,7 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 import type { IComponent } from "@twin.org/core";
-import type { IRuleGroup } from "./IRuleGroup";
+import type { IRuleGroup } from "./IRuleGroup.js";
 
 /**
  * Interface describing a component for processing data.

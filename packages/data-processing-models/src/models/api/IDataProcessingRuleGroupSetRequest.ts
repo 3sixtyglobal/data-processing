@@ -1,6 +1,6 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import type { IRule } from "../IRule";
+import type { IRule } from "../IRule.js";
 
 /**
  * Set a rule group.

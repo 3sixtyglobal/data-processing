@@ -1,7 +1,7 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 import { entity, property } from "@twin.org/entity";
-import type { ExtractionRule } from "./extractionRule";
+import type { ExtractionRule } from "./extractionRule.js";
 
 /**
  * Class defining an extraction rule group.

@@ -38,6 +38,14 @@ export class DataProcessingRestClient extends BaseRestClient implements IDataPro
 	}
 
 	/**
+	 * Returns the class name of the component.
+	 * @returns The class name of the component.
+	 */
+	public className(): string {
+		return DataProcessingRestClient.CLASS_NAME;
+	}
+
+	/**
 	 * Set an extraction rule group.
 	 * @param ruleGroup The rule group to store.
 	 * @returns Nothing.

@@ -21,6 +21,14 @@ export class XmlConverterConnector implements IDataConverterConnector {
 	public static readonly CLASS_NAME: string = nameof<XmlConverterConnector>();
 
 	/**
+	 * Returns the class name of the component.
+	 * @returns The class name of the component.
+	 */
+	public className(): string {
+		return XmlConverterConnector.CLASS_NAME;
+	}
+
+	/**
 	 * The MIME types that the converter can convert.
 	 * @returns The MIME types.
 	 */

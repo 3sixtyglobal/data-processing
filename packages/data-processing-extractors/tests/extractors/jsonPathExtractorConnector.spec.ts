@@ -1,6 +1,6 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import { JsonPathExtractorConnector } from "../../src/extractors/jsonPathExtractorConnector";
+import { JsonPathExtractorConnector } from "../../src/extractors/jsonPathExtractorConnector.js";
 
 describe("JsonPathExtractorConnector", () => {
 	test("Can output empty object with no extraction rules", async () => {
@@ -16,7 +16,7 @@ describe("JsonPathExtractorConnector", () => {
 		).rejects.toMatchObject({
 			name: "GeneralError",
 			message: "jsonPathExtractorConnector.invalidRule",
-			properties: { rule: "", reason: "can't backup beyond start ('':0)" }
+			properties: { rule: "" }
 		});
 	});
 
