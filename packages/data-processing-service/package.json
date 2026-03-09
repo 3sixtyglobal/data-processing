@@ -1,7 +1,7 @@
 {
 	"name": "@twin.org/data-processing-service",
 	"version": "0.0.3-next.1",
-	"description": "Data extractor connector implementations",
+	"description": "Service routes and orchestration logic for extraction and conversion workflows",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/twinfoundation/data-processing.git",

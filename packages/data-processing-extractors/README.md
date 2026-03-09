@@ -1,6 +1,6 @@
 # TWIN Data Processing Extractors
 
-Data extractor connector implementations.
+Connector implementations that extract data from external systems for processing.
 
 ## Installation
 

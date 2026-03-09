@@ -1,7 +1,7 @@
 {
 	"name": "@twin.org/data-processing-rest-client",
 	"version": "0.0.3-next.1",
-	"description": "Data processing contract implementation which can connect to REST endpoints",
+	"description": "REST client for calling data processing service endpoints from applications",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/twinfoundation/data-processing.git",

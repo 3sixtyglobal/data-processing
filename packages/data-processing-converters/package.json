@@ -1,7 +1,7 @@
 {
 	"name": "@twin.org/data-processing-converters",
 	"version": "0.0.3-next.1",
-	"description": "Data converter connector implementations",
+	"description": "Connector implementations that convert source data into canonical processing formats",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/twinfoundation/data-processing.git",

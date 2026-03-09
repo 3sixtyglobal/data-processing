@@ -1,7 +1,7 @@
 {
 	"name": "@twin.org/data-processing-extractors",
 	"version": "0.0.3-next.1",
-	"description": "Data extractor connector implementations",
+	"description": "Connector implementations that extract data from external systems for processing",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/twinfoundation/data-processing.git",

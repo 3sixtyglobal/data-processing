@@ -1,6 +1,6 @@
 # TWIN Data Processing Models
 
-Models which define the structure of data processing packages.
+Shared data models and schema definitions for processing pipelines.
 
 ## Installation
 

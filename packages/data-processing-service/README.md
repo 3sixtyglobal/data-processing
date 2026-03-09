@@ -1,6 +1,6 @@
 # TWIN Data Processing Service
 
-Services for data extraction.
+Service routes and orchestration logic for extraction and conversion workflows.
 
 ## Installation
 
