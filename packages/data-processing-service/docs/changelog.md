@@ -1,4 +1,4 @@
-# @twin.org/data-processing-service - Changelog
+# Changelog
 
 ## [0.0.3-next.1](https://github.com/twinfoundation/data-processing/compare/data-processing-service-v0.0.3-next.0...data-processing-service-v0.0.3-next.1) (2025-11-11)
 

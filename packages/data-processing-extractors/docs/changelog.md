@@ -1,4 +1,4 @@
-# @twin.org/data-processing-extractors - Changelog
+# Changelog
 
 ## [0.0.3-next.1](https://github.com/twinfoundation/data-processing/compare/data-processing-extractors-v0.0.3-next.0...data-processing-extractors-v0.0.3-next.1) (2025-11-11)
 
