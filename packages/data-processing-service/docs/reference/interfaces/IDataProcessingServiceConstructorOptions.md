@@ -4,21 +4,15 @@ The options for the data processing service constructor.
 
 ## Properties
 
-### extractionRuleGroupStorageConnectorType?
+### extractionRuleGroupStorageConnectorType? {#extractionrulegroupstorageconnectortype}
 
 > `optional` **extractionRuleGroupStorageConnectorType**: `string`
 
 The type of the entity storage connector to use for extraction rule groups.
 
-#### Default
-
-```ts
-extraction-rule-group
-```
-
 ***
 
-### defaultExtractorType?
+### defaultExtractorType? {#defaultextractortype}
 
 > `optional` **defaultExtractorType**: `string`
 

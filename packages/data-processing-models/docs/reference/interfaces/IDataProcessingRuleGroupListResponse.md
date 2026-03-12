@@ -4,7 +4,7 @@ Response for rule group entry list request.
 
 ## Properties
 
-### body
+### body {#body}
 
 > **body**: `object`
 

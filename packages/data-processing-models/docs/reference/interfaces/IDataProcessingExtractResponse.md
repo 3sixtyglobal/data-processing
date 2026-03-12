@@ -4,7 +4,7 @@ Response to extracting data.
 
 ## Properties
 
-### body
+### body {#body}
 
 > **body**: `unknown`
 

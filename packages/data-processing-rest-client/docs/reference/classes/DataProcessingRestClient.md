@@ -36,7 +36,7 @@ The configuration for the client.
 
 ## Properties
 
-### CLASS\_NAME
+### CLASS\_NAME {#class_name}
 
 > `readonly` `static` **CLASS\_NAME**: `string`
 
@@ -44,7 +44,7 @@ Runtime name for the class.
 
 ## Methods
 
-### className()
+### className() {#classname}
 
 > **className**(): `string`
 
@@ -62,7 +62,7 @@ The class name of the component.
 
 ***
 
-### ruleGroupSet()
+### ruleGroupSet() {#rulegroupset}
 
 > **ruleGroupSet**(`ruleGroup`): `Promise`\<`void`\>
 
@@ -88,7 +88,7 @@ Nothing.
 
 ***
 
-### ruleGroupGet()
+### ruleGroupGet() {#rulegroupget}
 
 > **ruleGroupGet**(`ruleGroupId`): `Promise`\<`IRuleGroup`\>
 
@@ -114,7 +114,7 @@ The rule group.
 
 ***
 
-### ruleGroupRemove()
+### ruleGroupRemove() {#rulegroupremove}
 
 > **ruleGroupRemove**(`ruleGroupId`): `Promise`\<`void`\>
 
@@ -140,7 +140,7 @@ Nothing.
 
 ***
 
-### extract()
+### extract() {#extract}
 
 > **extract**(`ruleGroupId`, `data`, `overrideExtractorType?`, `overrideMimeType?`): `Promise`\<`unknown`\>
 
@@ -184,7 +184,7 @@ The extracted data.
 
 ***
 
-### convert()
+### convert() {#convert}
 
 > **convert**(`data`, `overrideMimeType?`): `Promise`\<`unknown`\>
 
@@ -216,7 +216,7 @@ The converted data.
 
 ***
 
-### query()
+### query() {#query}
 
 > **query**(`cursor?`, `limit?`): `Promise`\<\{ `entities`: `IRuleGroup`[]; `cursor?`: `string`; \}\>
 

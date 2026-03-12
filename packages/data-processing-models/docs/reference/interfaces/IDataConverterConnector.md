@@ -8,7 +8,7 @@ Interface describing a connector for extracting data.
 
 ## Methods
 
-### mimeTypes()
+### mimeTypes() {#mimetypes}
 
 > **mimeTypes**(): `string`[]
 
@@ -22,7 +22,7 @@ The MIME types.
 
 ***
 
-### convert()
+### convert() {#convert}
 
 > **convert**(`data`): `Promise`\<`unknown`\>
 

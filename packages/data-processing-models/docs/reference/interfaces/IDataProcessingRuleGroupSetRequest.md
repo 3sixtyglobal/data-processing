@@ -4,7 +4,7 @@ Set a rule group.
 
 ## Properties
 
-### pathParams
+### pathParams {#pathparams}
 
 > **pathParams**: `object`
 
@@ -18,7 +18,7 @@ The rule id to set.
 
 ***
 
-### body
+### body {#body}
 
 > **body**: `object`
 

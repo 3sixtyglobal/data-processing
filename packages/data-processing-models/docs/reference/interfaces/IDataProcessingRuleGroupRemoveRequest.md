@@ -4,7 +4,7 @@ Remove a rule group.
 
 ## Properties
 
-### pathParams
+### pathParams {#pathparams}
 
 > **pathParams**: `object`
 

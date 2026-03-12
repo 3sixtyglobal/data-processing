@@ -14,7 +14,7 @@ Class defining an extraction rule.
 
 ## Properties
 
-### source
+### source {#source}
 
 > **source**: `string`
 
@@ -22,7 +22,7 @@ The source.
 
 ***
 
-### target
+### target {#target}
 
 > **target**: `string`
 
@@ -30,7 +30,7 @@ The target.
 
 ***
 
-### retainPathDepth?
+### retainPathDepth? {#retainpathdepth}
 
 > `optional` **retainPathDepth**: `number`
 
@@ -38,7 +38,7 @@ The retainPathDepth.
 
 ***
 
-### coerce?
+### coerce? {#coerce}
 
 > `optional` **coerce**: `CoerceType`
 

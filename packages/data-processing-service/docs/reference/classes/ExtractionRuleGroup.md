@@ -14,7 +14,7 @@ Class defining an extraction rule group.
 
 ## Properties
 
-### id
+### id {#id}
 
 > **id**: `string`
 
@@ -22,7 +22,7 @@ The id.
 
 ***
 
-### label
+### label {#label}
 
 > **label**: `string`
 
@@ -30,7 +30,7 @@ The label.
 
 ***
 
-### rules
+### rules {#rules}
 
 > **rules**: [`ExtractionRule`](ExtractionRule.md)[]
 

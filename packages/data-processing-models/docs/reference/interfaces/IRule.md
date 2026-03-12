@@ -4,7 +4,7 @@ Rule defining how to extract data from an object.
 
 ## Properties
 
-### source
+### source {#source}
 
 > **source**: `string`
 
@@ -13,7 +13,7 @@ should be in JSONPath format https://www.rfc-editor.org/rfc/rfc9535.html.
 
 ***
 
-### target
+### target {#target}
 
 > **target**: `string`
 
@@ -28,7 +28,7 @@ Supports simple dotted path notation, and numeric index notation.
 
 ***
 
-### retainPathDepth?
+### retainPathDepth? {#retainpathdepth}
 
 > `optional` **retainPathDepth**: `number`
 
@@ -36,7 +36,7 @@ When extracting objects, how much of the original path should be maintained in t
 
 ***
 
-### coerce?
+### coerce? {#coerce}
 
 > `optional` **coerce**: `CoerceType`
 

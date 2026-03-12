@@ -18,7 +18,7 @@ Class for converting data to JSON from bytes.
 
 ## Properties
 
-### NAMESPACE
+### NAMESPACE {#namespace}
 
 > `readonly` `static` **NAMESPACE**: `string` = `"json"`
 
@@ -26,7 +26,7 @@ The namespace supported by the data converter connector.
 
 ***
 
-### CLASS\_NAME
+### CLASS\_NAME {#class_name}
 
 > `readonly` `static` **CLASS\_NAME**: `string`
 
@@ -34,7 +34,7 @@ Runtime name for the class.
 
 ## Methods
 
-### className()
+### className() {#classname}
 
 > **className**(): `string`
 
@@ -52,7 +52,7 @@ The class name of the component.
 
 ***
 
-### mimeTypes()
+### mimeTypes() {#mimetypes}
 
 > **mimeTypes**(): `string`[]
 
@@ -70,7 +70,7 @@ The MIME types.
 
 ***
 
-### convert()
+### convert() {#convert}
 
 > **convert**(`data`): `Promise`\<`unknown`\>
 

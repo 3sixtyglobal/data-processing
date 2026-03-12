@@ -8,7 +8,7 @@ Interface describing a component for processing data.
 
 ## Methods
 
-### ruleGroupSet()
+### ruleGroupSet() {#rulegroupset}
 
 > **ruleGroupSet**(`ruleGroup`): `Promise`\<`void`\>
 
@@ -30,7 +30,7 @@ Nothing.
 
 ***
 
-### ruleGroupGet()
+### ruleGroupGet() {#rulegroupget}
 
 > **ruleGroupGet**(`ruleGroupId`): `Promise`\<[`IRuleGroup`](IRuleGroup.md)\>
 
@@ -52,7 +52,7 @@ The rule group.
 
 ***
 
-### ruleGroupRemove()
+### ruleGroupRemove() {#rulegroupremove}
 
 > **ruleGroupRemove**(`ruleGroupId`): `Promise`\<`void`\>
 
@@ -74,7 +74,7 @@ Nothing.
 
 ***
 
-### extract()
+### extract() {#extract}
 
 > **extract**(`ruleGroupId`, `data`, `overrideExtractorType?`, `overrideMimeType?`): `Promise`\<`unknown`\>
 
@@ -114,7 +114,7 @@ The extracted data.
 
 ***
 
-### convert()
+### convert() {#convert}
 
 > **convert**(`data`, `overrideMimeType?`): `Promise`\<`unknown`\>
 
@@ -142,7 +142,7 @@ The converted data.
 
 ***
 
-### query()
+### query() {#query}
 
 > **query**(`cursor?`, `limit?`): `Promise`\<\{ `entities`: [`IRuleGroup`](IRuleGroup.md)[]; `cursor?`: `string`; \}\>
 

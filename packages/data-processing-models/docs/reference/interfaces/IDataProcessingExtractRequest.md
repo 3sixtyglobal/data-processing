@@ -4,7 +4,7 @@ Perform an extraction on the data with the specified ruleset.
 
 ## Properties
 
-### body
+### body {#body}
 
 > **body**: `object`
 

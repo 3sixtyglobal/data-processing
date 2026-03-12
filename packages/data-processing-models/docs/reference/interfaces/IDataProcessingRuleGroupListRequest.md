@@ -4,7 +4,7 @@ Get the a list of the rule group entries.
 
 ## Properties
 
-### query?
+### query? {#query}
 
 > `optional` **query**: `object`
 
