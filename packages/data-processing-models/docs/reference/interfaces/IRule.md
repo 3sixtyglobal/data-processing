@@ -30,7 +30,7 @@ Supports simple dotted path notation, and numeric index notation.
 
 ### retainPathDepth? {#retainpathdepth}
 
-> `optional` **retainPathDepth**: `number`
+> `optional` **retainPathDepth?**: `number`
 
 When extracting objects, how much of the original path should be maintained in the target object.
 
@@ -38,6 +38,6 @@ When extracting objects, how much of the original path should be maintained in t
 
 ### coerce? {#coerce}
 
-> `optional` **coerce**: `CoerceType`
+> `optional` **coerce?**: `CoerceType`
 
 Should the data be coerced to a specific type.

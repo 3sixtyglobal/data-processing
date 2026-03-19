@@ -32,7 +32,7 @@ The target.
 
 ### retainPathDepth? {#retainpathdepth}
 
-> `optional` **retainPathDepth**: `number`
+> `optional` **retainPathDepth?**: `number`
 
 The retainPathDepth.
 
@@ -40,6 +40,6 @@ The retainPathDepth.
 
 ### coerce? {#coerce}
 
-> `optional` **coerce**: `CoerceType`
+> `optional` **coerce?**: `CoerceType`
 
 The coercion to use.

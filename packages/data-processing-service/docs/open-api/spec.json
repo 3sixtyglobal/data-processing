@@ -655,59 +655,49 @@
 	"components": {
 		"schemas": {
 			"CoerceType": {
+				"description": "The types the extracted data can be coerced to.",
 				"anyOf": [
 					{
-						"type": "string",
 						"const": "string",
 						"description": "String."
 					},
 					{
-						"type": "string",
 						"const": "number",
 						"description": "Number."
 					},
 					{
-						"type": "string",
 						"const": "integer",
 						"description": "Integer."
 					},
 					{
-						"type": "string",
 						"const": "boolean",
 						"description": "Boolean."
 					},
 					{
-						"type": "string",
 						"const": "bigint",
 						"description": "Big Integer."
 					},
 					{
-						"type": "string",
 						"const": "date",
 						"description": "Date."
 					},
 					{
-						"type": "string",
 						"const": "datetime",
 						"description": "Date Time."
 					},
 					{
-						"type": "string",
 						"const": "time",
 						"description": "Time."
 					},
 					{
-						"type": "string",
 						"const": "object",
 						"description": "Object."
 					},
 					{
-						"type": "string",
 						"const": "uint8array",
 						"description": "Uint8Array."
 					}
-				],
-				"description": "The types the extracted data can be coerced to."
+				]
 			},
 			"DataProcessingConvertRequest": {
 				"type": "object",
@@ -756,7 +746,7 @@
 				"description": "The params for the extract."
 			},
 			"DataProcessingExtractResponse": {
-				"description": "The extracted data in extended JSON format which keeps types like bigint, dates and uint8array intact. Use ObjectHelper.fromExtended to get the object with original types."
+				"description": "The extracted data in extended JSON format which keeps types like bigint, dates and uint8array intact.\nUse ObjectHelper.fromExtended to get the object with original types."
 			},
 			"DataProcessingRuleGroupListResponse": {
 				"type": "object",
@@ -800,6 +790,7 @@
 				"description": "The data to be used in the store."
 			},
 			"Error": {
+				"description": "Model to describe serialized error.",
 				"type": "object",
 				"properties": {
 					"name": {
@@ -830,19 +821,19 @@
 				"required": [
 					"name",
 					"message"
-				],
-				"description": "Model to describe serialized error."
+				]
 			},
 			"Rule": {
+				"description": "Rule defining how to extract data from an object.",
 				"type": "object",
 				"properties": {
 					"source": {
 						"type": "string",
-						"description": "The path to the data in the document to extract. should be in JSONPath format https://www.rfc-editor.org/rfc/rfc9535.html."
+						"description": "The path to the data in the document to extract.\nshould be in JSONPath format https://www.rfc-editor.org/rfc/rfc9535.html."
 					},
 					"target": {
 						"type": "string",
-						"description": "The target path of where to store the extracted data. Supports simple dotted path notation, and numeric index notation."
+						"description": "The target path of where to store the extracted data.\nSupports simple dotted path notation, and numeric index notation."
 					},
 					"retainPathDepth": {
 						"type": "number",
@@ -855,10 +846,10 @@
 				"required": [
 					"source",
 					"target"
-				],
-				"description": "Rule defining how to extract data from an object."
+				]
 			},
 			"RuleGroup": {
+				"description": "Group of rules for extraction.",
 				"type": "object",
 				"properties": {
 					"id": {
@@ -881,8 +872,7 @@
 					"id",
 					"label",
 					"rules"
-				],
-				"description": "Group of rules for extraction."
+				]
 			}
 		},
 		"securitySchemes": {

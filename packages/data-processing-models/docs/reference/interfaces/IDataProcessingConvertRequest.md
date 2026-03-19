@@ -18,6 +18,6 @@ The binary data to convert in base64.
 
 #### overrideMimeType?
 
-> `optional` **overrideMimeType**: `string`
+> `optional` **overrideMimeType?**: `string`
 
 Use the specified mime type for conversion, will auto detect if undefined.
