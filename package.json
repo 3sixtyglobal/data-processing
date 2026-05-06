@@ -4,7 +4,7 @@
 	"description": "Data Processing",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/twinfoundation/data-processing.git"
+		"url": "git+https://github.com/iotaledger/data-processing.git"
 	},
 	"author": "martyn.janes@iota.org",
 	"license": "Apache-2.0",
@@ -62,7 +62,7 @@
 	],
 	"type": "module",
 	"bugs": {
-		"url": "git+https://github.com/twinfoundation/data-processing/issues"
+		"url": "git+https://github.com/iotaledger/data-processing/issues"
 	},
 	"homepage": "https://twindev.org"
 }
