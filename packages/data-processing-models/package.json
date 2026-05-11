@@ -1,6 +1,6 @@
 {
 	"name": "@twin.org/data-processing-models",
-	"version": "0.0.3-next.1",
+	"version": "0.0.3-next.2",
 	"description": "Shared data models and schema definitions for processing pipelines",
 	"repository": {
 		"type": "git",

@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.0.3-next.2](https://github.com/iotaledger/twin-data-processing/compare/data-processing-extractors-v0.0.3-next.1...data-processing-extractors-v0.0.3-next.2) (2026-05-11)
+
+
+### Features
+
+* typescript 6 update ([b67debb](https://github.com/iotaledger/twin-data-processing/commit/b67debb8aff83c0f3b179c6db038ed733f7308b1))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.0.3-next.1 to 0.0.3-next.2
+
 ## [0.0.3-next.1](https://github.com/iotaledger/twin-data-processing/compare/data-processing-extractors-v0.0.3-next.0...data-processing-extractors-v0.0.3-next.1) (2025-11-11)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3-next.2](https://github.com/iotaledger/twin-data-processing/compare/data-processing-models-v0.0.3-next.1...data-processing-models-v0.0.3-next.2) (2026-05-11)
+
+
+### Features
+
+* typescript 6 update ([b67debb](https://github.com/iotaledger/twin-data-processing/commit/b67debb8aff83c0f3b179c6db038ed733f7308b1))
+
 ## [0.0.3-next.1](https://github.com/iotaledger/twin-data-processing/compare/data-processing-models-v0.0.3-next.0...data-processing-models-v0.0.3-next.1) (2025-11-11)
 
 
