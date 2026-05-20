@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.0.3-next.3](https://github.com/iotaledger/twin-data-processing/compare/data-processing-converters-v0.0.3-next.2...data-processing-converters-v0.0.3-next.3) (2026-05-20)
+
+
+### Features
+
+* update dependencies ([0b2e77d](https://github.com/iotaledger/twin-data-processing/commit/0b2e77d673ede6e92847ff0b50fdfcf4e9c08b3b))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.0.3-next.2 to 0.0.3-next.3
+
 ## [0.0.3-next.2](https://github.com/iotaledger/twin-data-processing/compare/data-processing-converters-v0.0.3-next.1...data-processing-converters-v0.0.3-next.2) (2026-05-11)
 
 
