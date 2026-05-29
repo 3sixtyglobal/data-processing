@@ -4,7 +4,7 @@
 	"description": "Connector implementations that extract data from external systems for processing",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/iotaledger/data-processing.git",
+		"url": "git+https://github.com/iotaledger/twin-data-processing.git",
 		"directory": "packages/data-processing-extractors"
 	},
 	"author": "martyn.janes@iota.org",
@@ -78,7 +78,7 @@
 		"conversion"
 	],
 	"bugs": {
-		"url": "git+https://github.com/iotaledger/data-processing/issues"
+		"url": "git+https://github.com/iotaledger/twin-data-processing/issues"
 	},
 	"homepage": "https://twindev.org"
 }
