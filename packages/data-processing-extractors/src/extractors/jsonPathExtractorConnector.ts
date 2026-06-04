@@ -51,6 +51,7 @@ export class JsonPathExtractorConnector implements IDataExtractorConnector {
 	 * @param jsonObject The JSON object to extract from.
 	 * @param rule The rule to use to extract the data.
 	 * @param outputObject The object to output the extracted data to.
+	 * @throws GeneralError if the rule is invalid or extraction fails.
 	 * @internal
 	 */
 	private extractValue(jsonObject: unknown, rule: IRule, outputObject: unknown): void {
