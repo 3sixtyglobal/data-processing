@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0.
 
 /**
- * Get the a list of the rule group entries.
+ * Get a list of the rule group entries.
  */
 export interface IDataProcessingRuleGroupListRequest {
 	/**

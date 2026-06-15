@@ -29,17 +29,18 @@ export class XmlConverterConnector implements IDataConverterConnector {
 	}
 
 	/**
-	 * The MIME types that the converter can convert.
-	 * @returns The MIME types.
+	 * Returns the MIME types that this connector can convert.
+	 * @returns The supported MIME type strings.
 	 */
 	public mimeTypes(): string[] {
 		return [MimeTypes.Xml];
 	}
 
 	/**
-	 * Converts the data to a structured object.
-	 * @param data The data to extract from.
-	 * @returns The extracted data.
+	 * Converts the binary data to a structured object by parsing it as XML.
+	 * @param data The binary data to convert.
+	 * @returns The parsed object representation of the XML.
+	 * @throws GeneralError if the data cannot be parsed as valid XML.
 	 */
 	public async convert(data: Uint8Array): Promise<unknown> {
 		Guards.uint8Array(XmlConverterConnector.CLASS_NAME, nameof(data), data);

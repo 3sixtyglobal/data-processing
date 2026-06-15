@@ -6,7 +6,7 @@
  */
 export interface IDataProcessingConvertRequest {
 	/**
-	 * The params for the convert.
+	 * The request body containing the data to convert.
 	 */
 	body: {
 		/**

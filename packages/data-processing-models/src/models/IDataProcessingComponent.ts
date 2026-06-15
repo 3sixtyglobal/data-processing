@@ -10,7 +10,7 @@ export interface IDataProcessingComponent extends IComponent {
 	/**
 	 * Set an extraction rule group.
 	 * @param ruleGroup The rule group to store.
-	 * @returns Nothing.
+	 * @returns A promise that resolves when the rule group has been stored.
 	 */
 	ruleGroupSet(ruleGroup: IRuleGroup): Promise<void>;
 
@@ -24,7 +24,7 @@ export interface IDataProcessingComponent extends IComponent {
 	/**
 	 * Remove a rule group.
 	 * @param ruleGroupId The id of the rule group to remove.
-	 * @returns Nothing.
+	 * @returns A promise that resolves when the rule group has been removed.
 	 */
 	ruleGroupRemove(ruleGroupId: string): Promise<void>;
 

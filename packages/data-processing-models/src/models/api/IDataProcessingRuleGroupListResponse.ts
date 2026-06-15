@@ -7,7 +7,7 @@ import type { IRuleGroup } from "../IRuleGroup.js";
  */
 export interface IDataProcessingRuleGroupListResponse {
 	/**
-	 * The response payload.
+	 * The response body containing the list of rule groups and optional pagination cursor.
 	 */
 	body: {
 		/**

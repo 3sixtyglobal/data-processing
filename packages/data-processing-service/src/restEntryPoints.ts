@@ -3,6 +3,9 @@
 import type { IRestRouteEntryPoint } from "@twin.org/api-models";
 import { generateRestRoutesDataProcessing, tagsDataProcessing } from "./dataProcessingRoutes.js";
 
+/**
+ * The REST entry points for the data processing service.
+ */
 export const restEntryPoints: IRestRouteEntryPoint[] = [
 	{
 		name: "data-processing",

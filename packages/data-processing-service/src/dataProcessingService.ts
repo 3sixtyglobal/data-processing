@@ -72,7 +72,7 @@ export class DataProcessingService implements IDataProcessingComponent {
 	/**
 	 * Set an extraction rule group.
 	 * @param ruleGroup The rule group to store.
-	 * @returns Nothing.
+	 * @returns A promise that resolves when the rule group has been stored.
 	 */
 	public async ruleGroupSet(ruleGroup: IRuleGroup): Promise<void> {
 		Guards.object<IRuleGroup>(DataProcessingService.CLASS_NAME, nameof(ruleGroup), ruleGroup);
@@ -128,7 +128,7 @@ export class DataProcessingService implements IDataProcessingComponent {
 	/**
 	 * Remove a rule group.
 	 * @param ruleGroupId The id of the rule group to remove.
-	 * @returns Nothing.
+	 * @returns A promise that resolves when the rule group has been removed.
 	 */
 	public async ruleGroupRemove(ruleGroupId: string): Promise<void> {
 		Guards.stringValue(DataProcessingService.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
@@ -143,7 +143,7 @@ export class DataProcessingService implements IDataProcessingComponent {
 	}
 
 	/**
-	 * Extracts data from the from the provided input.
+	 * Extracts data from the provided input.
 	 * @param ruleGroupId The id of the rule group to use to extract data.
 	 * @param data The data to extract from.
 	 * @param overrideExtractorType An optional override for the extractor type.

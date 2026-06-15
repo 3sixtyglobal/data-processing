@@ -28,17 +28,18 @@ export class JsonConverterConnector implements IDataConverterConnector {
 	}
 
 	/**
-	 * The MIME types that the converter can convert.
-	 * @returns The MIME types.
+	 * Returns the MIME types that this connector can convert.
+	 * @returns The supported MIME type strings.
 	 */
 	public mimeTypes(): string[] {
 		return [MimeTypes.Json, MimeTypes.JsonLd];
 	}
 
 	/**
-	 * Converts the data to a structured object.
-	 * @param data The data to extract from.
-	 * @returns The extracted data.
+	 * Converts the binary data to a structured object by parsing it as JSON.
+	 * @param data The binary data to convert.
+	 * @returns The parsed JSON object.
+	 * @throws GeneralError if the data cannot be parsed as valid JSON.
 	 */
 	public async convert(data: Uint8Array): Promise<unknown> {
 		Guards.uint8Array(JsonConverterConnector.CLASS_NAME, nameof(data), data);

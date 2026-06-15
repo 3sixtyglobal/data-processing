@@ -6,7 +6,7 @@ import { ExtractionRule } from "./entities/extractionRule.js";
 import { ExtractionRuleGroup } from "./entities/extractionRuleGroup.js";
 
 /**
- * Initialize the schema for the data extraction connector entity storage.
+ * Registers entity schemas for the data extraction connector entity storage.
  */
 export function initSchema(): void {
 	EntitySchemaFactory.register(nameof<ExtractionRuleGroup>(), () =>

@@ -9,19 +9,19 @@ import type { ExtractionRule } from "./extractionRule.js";
 @entity()
 export class ExtractionRuleGroup {
 	/**
-	 * The id.
+	 * The unique identifier for the rule group.
 	 */
 	@property({ type: "string", isPrimary: true })
 	public id!: string;
 
 	/**
-	 * The label.
+	 * The human-readable label for the rule group.
 	 */
 	@property({ type: "string" })
 	public label!: string;
 
 	/**
-	 * The rules.
+	 * The extraction rules that belong to this group.
 	 */
 	@property({ type: "array", itemTypeRef: "ExtractionRule", itemType: "object" })
 	public rules!: ExtractionRule[];

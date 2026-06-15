@@ -48,7 +48,7 @@ export class DataProcessingRestClient extends BaseRestClient implements IDataPro
 	/**
 	 * Set an extraction rule group.
 	 * @param ruleGroup The rule group to store.
-	 * @returns Nothing.
+	 * @returns A promise that resolves when the rule group has been stored.
 	 */
 	public async ruleGroupSet(ruleGroup: IRuleGroup): Promise<void> {
 		Guards.object<IRuleGroup>(DataProcessingRestClient.CLASS_NAME, nameof(ruleGroup), ruleGroup);
@@ -102,7 +102,7 @@ export class DataProcessingRestClient extends BaseRestClient implements IDataPro
 	/**
 	 * Remove a rule group.
 	 * @param ruleGroupId The id of the rule group to remove.
-	 * @returns Nothing.
+	 * @returns A promise that resolves when the rule group has been removed.
 	 */
 	public async ruleGroupRemove(ruleGroupId: string): Promise<void> {
 		Guards.stringValue(DataProcessingRestClient.CLASS_NAME, nameof(ruleGroupId), ruleGroupId);
