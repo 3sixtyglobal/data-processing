@@ -20,7 +20,8 @@ describe("DataProcessingService", () => {
 	beforeEach(() => {
 		initSchema();
 		extractRuleGroupEntityStorage = new MemoryEntityStorageConnector<ExtractionRuleGroup>({
-			entitySchema: nameof<ExtractionRuleGroup>()
+			entitySchema: nameof<ExtractionRuleGroup>(),
+			config: { storageKey: "extraction-rule-group" }
 		});
 		EntityStorageConnectorFactory.register(
 			"extraction-rule-group",
