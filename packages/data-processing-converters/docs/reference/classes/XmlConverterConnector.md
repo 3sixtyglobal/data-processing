@@ -56,13 +56,13 @@ The class name of the component.
 
 > **mimeTypes**(): `string`[]
 
-The MIME types that the converter can convert.
+Returns the MIME types that this connector can convert.
 
 #### Returns
 
 `string`[]
 
-The MIME types.
+The supported MIME type strings.
 
 #### Implementation of
 
@@ -74,7 +74,7 @@ The MIME types.
 
 > **convert**(`data`): `Promise`\<`unknown`\>
 
-Converts the data to a structured object.
+Converts the binary data to a structured object by parsing it as XML.
 
 #### Parameters
 
@@ -82,13 +82,17 @@ Converts the data to a structured object.
 
 `Uint8Array`
 
-The data to extract from.
+The binary data to convert.
 
 #### Returns
 
 `Promise`\<`unknown`\>
 
-The extracted data.
+The parsed object representation of the XML.
+
+#### Throws
+
+GeneralError if the data cannot be parsed as valid XML.
 
 #### Implementation of
 

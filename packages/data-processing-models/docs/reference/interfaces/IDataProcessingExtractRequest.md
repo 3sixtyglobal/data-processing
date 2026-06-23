@@ -8,7 +8,7 @@ Perform an extraction on the data with the specified ruleset.
 
 > **body**: `object`
 
-The params for the extract.
+The request body containing the data and rule group to use for extraction.
 
 #### ruleGroupId
 

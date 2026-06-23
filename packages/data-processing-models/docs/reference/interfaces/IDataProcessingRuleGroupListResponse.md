@@ -8,7 +8,7 @@ Response for rule group entry list request.
 
 > **body**: `object`
 
-The response payload.
+The response body containing the list of rule groups and optional pagination cursor.
 
 #### entities
 

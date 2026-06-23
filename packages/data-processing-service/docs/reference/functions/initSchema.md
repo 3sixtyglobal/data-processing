@@ -2,7 +2,7 @@
 
 > **initSchema**(): `void`
 
-Initialize the schema for the data extraction connector entity storage.
+Registers entity schemas for the data extraction connector entity storage.
 
 ## Returns
 

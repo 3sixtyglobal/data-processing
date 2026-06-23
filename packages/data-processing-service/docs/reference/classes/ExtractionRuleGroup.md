@@ -18,7 +18,7 @@ Class defining an extraction rule group.
 
 > **id**: `string`
 
-The id.
+The unique identifier for the rule group.
 
 ***
 
@@ -26,7 +26,7 @@ The id.
 
 > **label**: `string`
 
-The label.
+The human-readable label for the rule group.
 
 ***
 
@@ -34,4 +34,4 @@ The label.
 
 > **rules**: [`ExtractionRule`](ExtractionRule.md)[]
 
-The rules.
+The extraction rules that belong to this group.

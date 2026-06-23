@@ -8,7 +8,7 @@ Perform a conversion on the data.
 
 > **body**: `object`
 
-The params for the convert.
+The request body containing the data to convert.
 
 #### data
 

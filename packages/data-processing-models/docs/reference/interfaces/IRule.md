@@ -8,8 +8,11 @@ Rule defining how to extract data from an object.
 
 > **source**: `string`
 
-The path to the data in the document to extract.
-should be in JSONPath format https://www.rfc-editor.org/rfc/rfc9535.html.
+The JSONPath expression identifying the data to extract from the document.
+
+#### See
+
+https://www.rfc-editor.org/rfc/rfc9535.html
 
 ***
 
@@ -17,14 +20,7 @@ should be in JSONPath format https://www.rfc-editor.org/rfc/rfc9535.html.
 
 > **target**: `string`
 
-The target path of where to store the extracted data.
-Supports simple dotted path notation, and numeric index notation.
-
-#### Example
-
-```ts
-"path.to.data" or "path.to.data.0"
-```
+The target path of where to store the extracted data, using dotted or numeric index notation.
 
 ***
 

@@ -8,13 +8,13 @@ Set a rule group.
 
 > **pathParams**: `object`
 
-The parameters to be used in the set.
+The path parameters for the request.
 
 #### id
 
 > **id**: `string`
 
-The rule id to set.
+The id of the rule group to set.
 
 ***
 
@@ -22,7 +22,7 @@ The rule id to set.
 
 > **body**: `object`
 
-The data to be used in the store.
+The rule group data to store.
 
 #### label
 

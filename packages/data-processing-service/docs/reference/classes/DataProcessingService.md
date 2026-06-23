@@ -26,6 +26,10 @@ The options for the connector.
 
 `DataProcessingService`
 
+#### Throws
+
+If no extractor connector is registered.
+
 ## Properties
 
 ### CLASS\_NAME {#class_name}
@@ -72,7 +76,7 @@ The rule group to store.
 
 `Promise`\<`void`\>
 
-Nothing.
+A promise that resolves when the rule group has been stored.
 
 #### Implementation of
 
@@ -124,7 +128,7 @@ The id of the rule group to remove.
 
 `Promise`\<`void`\>
 
-Nothing.
+A promise that resolves when the rule group has been removed.
 
 #### Implementation of
 
@@ -136,7 +140,7 @@ Nothing.
 
 > **extract**(`ruleGroupId`, `data`, `overrideExtractorType?`, `overrideMimeType?`): `Promise`\<`unknown`\>
 
-Extracts data from the from the provided input.
+Extracts data from the provided input.
 
 #### Parameters
 

@@ -1,6 +1,6 @@
 # Interface: IDataProcessingRuleGroupListRequest
 
-Get the a list of the rule group entries.
+Get a list of the rule group entries.
 
 ## Properties
 

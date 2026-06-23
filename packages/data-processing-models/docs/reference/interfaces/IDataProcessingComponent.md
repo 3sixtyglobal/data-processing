@@ -26,7 +26,7 @@ The rule group to store.
 
 `Promise`\<`void`\>
 
-Nothing.
+A promise that resolves when the rule group has been stored.
 
 ***
 
@@ -70,7 +70,7 @@ The id of the rule group to remove.
 
 `Promise`\<`void`\>
 
-Nothing.
+A promise that resolves when the rule group has been removed.
 
 ***
 

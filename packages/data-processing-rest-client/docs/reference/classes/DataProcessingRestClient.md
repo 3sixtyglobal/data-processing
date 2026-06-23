@@ -80,7 +80,7 @@ The rule group to store.
 
 `Promise`\<`void`\>
 
-Nothing.
+A promise that resolves when the rule group has been stored.
 
 #### Implementation of
 
@@ -132,7 +132,7 @@ The id of the rule group to remove.
 
 `Promise`\<`void`\>
 
-Nothing.
+A promise that resolves when the rule group has been removed.
 
 #### Implementation of
 

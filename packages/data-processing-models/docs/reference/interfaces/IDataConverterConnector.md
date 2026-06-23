@@ -1,6 +1,6 @@
 # Interface: IDataConverterConnector
 
-Interface describing a connector for extracting data.
+Interface describing a connector for converting data.
 
 ## Extends
 
@@ -12,13 +12,13 @@ Interface describing a connector for extracting data.
 
 > **mimeTypes**(): `string`[]
 
-The MIME types that the converter can convert.
+Returns the MIME types that this connector can convert.
 
 #### Returns
 
 `string`[]
 
-The MIME types.
+The supported MIME type strings.
 
 ***
 
@@ -34,10 +34,10 @@ Converts the data to a structured object.
 
 `Uint8Array`
 
-The data to extract from.
+The binary data to convert.
 
 #### Returns
 
 `Promise`\<`unknown`\>
 
-The extracted data.
+The parsed structured object.
