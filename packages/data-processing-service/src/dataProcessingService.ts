@@ -43,6 +43,7 @@ export class DataProcessingService implements IDataProcessingComponent {
 	/**
 	 * Create a new instance of DataExtractionService.
 	 * @param options The options for the connector.
+	 * @throws {GeneralError} If no extractor connector is registered.
 	 */
 	constructor(options?: IDataProcessingServiceConstructorOptions) {
 		this._extractionRuleGroupStorage = EntityStorageConnectorFactory.get(
