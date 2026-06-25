@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.9.0](https://github.com/iotaledger/twin-data-processing/compare/data-processing-converters-v0.9.0...data-processing-converters-v0.9.0) (2026-06-25)
+
+
+### Features
+
+* Add rule group query functionality ([#2](https://github.com/iotaledger/twin-data-processing/issues/2)) ([0fbbfb0](https://github.com/iotaledger/twin-data-processing/commit/0fbbfb065b6ecc293920b25f97ba011743105486))
+* release to production ([531ba89](https://github.com/iotaledger/twin-data-processing/commit/531ba89dea2deb2810870b72851dca3081f9d2ce))
+* release to production ([#35](https://github.com/iotaledger/twin-data-processing/issues/35)) ([b712976](https://github.com/iotaledger/twin-data-processing/commit/b712976f1a72061801d0edf5fa50cb1baf8b6393))
+* update dependencies ([21b8e80](https://github.com/iotaledger/twin-data-processing/commit/21b8e8007c87136a09f0a8e35ffde13a07ff4711))
+* use shared store mechanism ([#6](https://github.com/iotaledger/twin-data-processing/issues/6)) ([6009228](https://github.com/iotaledger/twin-data-processing/commit/600922880acef07cc2f818dee7645c342929108b))
+
 ## [0.9.0-next.1](https://github.com/iotaledger/twin-data-processing/compare/data-processing-converters-v0.9.0-next.0...data-processing-converters-v0.9.0-next.1) (2026-06-23)
 
 
