@@ -1,23 +1,23 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import type { IRule } from "../IRule";
+import type { IRule } from "../IRule.js";
 
 /**
  * Set a rule group.
  */
 export interface IDataProcessingRuleGroupSetRequest {
 	/**
-	 * The parameters to be used in the set.
+	 * The path parameters for the request.
 	 */
 	pathParams: {
 		/**
-		 * The rule id to set.
+		 * The id of the rule group to set.
 		 */
 		id: string;
 	};
 
 	/**
-	 * The data to be used in the store.
+	 * The rule group data to store.
 	 */
 	body: {
 		/**

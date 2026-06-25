@@ -1,6 +1,6 @@
 # TWIN Data Processing REST Client
 
-Data processing contract implementation which can connect to REST endpoints.
+REST client for calling data processing service endpoints from applications.
 
 ## Installation
 

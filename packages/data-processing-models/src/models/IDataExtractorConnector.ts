@@ -1,7 +1,7 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 import type { IComponent } from "@twin.org/core";
-import type { IRule } from "./IRule";
+import type { IRule } from "./IRule.js";
 
 /**
  * Interface describing a connector for extracting data.

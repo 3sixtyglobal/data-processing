@@ -4,11 +4,11 @@ Perform a conversion on the data.
 
 ## Properties
 
-### body
+### body {#body}
 
 > **body**: `object`
 
-The params for the convert.
+The request body containing the data to convert.
 
 #### data
 
@@ -18,6 +18,6 @@ The binary data to convert in base64.
 
 #### overrideMimeType?
 
-> `optional` **overrideMimeType**: `string`
+> `optional` **overrideMimeType?**: `string`
 
 Use the specified mime type for conversion, will auto detect if undefined.

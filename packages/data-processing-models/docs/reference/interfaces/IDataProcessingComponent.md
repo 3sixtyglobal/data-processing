@@ -8,7 +8,7 @@ Interface describing a component for processing data.
 
 ## Methods
 
-### ruleGroupSet()
+### ruleGroupSet() {#rulegroupset}
 
 > **ruleGroupSet**(`ruleGroup`): `Promise`\<`void`\>
 
@@ -26,11 +26,11 @@ The rule group to store.
 
 `Promise`\<`void`\>
 
-Nothing.
+A promise that resolves when the rule group has been stored.
 
 ***
 
-### ruleGroupGet()
+### ruleGroupGet() {#rulegroupget}
 
 > **ruleGroupGet**(`ruleGroupId`): `Promise`\<[`IRuleGroup`](IRuleGroup.md)\>
 
@@ -52,7 +52,7 @@ The rule group.
 
 ***
 
-### ruleGroupRemove()
+### ruleGroupRemove() {#rulegroupremove}
 
 > **ruleGroupRemove**(`ruleGroupId`): `Promise`\<`void`\>
 
@@ -70,11 +70,11 @@ The id of the rule group to remove.
 
 `Promise`\<`void`\>
 
-Nothing.
+A promise that resolves when the rule group has been removed.
 
 ***
 
-### extract()
+### extract() {#extract}
 
 > **extract**(`ruleGroupId`, `data`, `overrideExtractorType?`, `overrideMimeType?`): `Promise`\<`unknown`\>
 
@@ -114,7 +114,7 @@ The extracted data.
 
 ***
 
-### convert()
+### convert() {#convert}
 
 > **convert**(`data`, `overrideMimeType?`): `Promise`\<`unknown`\>
 
@@ -142,9 +142,9 @@ The converted data.
 
 ***
 
-### query()
+### query() {#query}
 
-> **query**(`cursor?`, `pageSize?`): `Promise`\<\{ `entities`: [`IRuleGroup`](IRuleGroup.md)[]; `cursor?`: `string`; \}\>
+> **query**(`cursor?`, `limit?`): `Promise`\<\{ `entities`: [`IRuleGroup`](IRuleGroup.md)[]; `cursor?`: `string`; \}\>
 
 Query the rule group entries.
 
@@ -154,13 +154,13 @@ Query the rule group entries.
 
 `string`
 
-The cursor to request the next page of entities.
+The cursor to request the next chunk of entities.
 
-##### pageSize?
+##### limit?
 
 `number`
 
-The maximum number of entities in a page.
+Limit the number of entities to return.
 
 #### Returns
 

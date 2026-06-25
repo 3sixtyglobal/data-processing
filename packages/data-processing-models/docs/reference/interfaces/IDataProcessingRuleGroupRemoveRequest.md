@@ -4,14 +4,14 @@ Remove a rule group.
 
 ## Properties
 
-### pathParams
+### pathParams {#pathparams}
 
 > **pathParams**: `object`
 
-The parameters to be used in the remove.
+The path parameters for the request.
 
 #### id
 
 > **id**: `string`
 
-The rule id to remove.
+The id of the rule group to remove.

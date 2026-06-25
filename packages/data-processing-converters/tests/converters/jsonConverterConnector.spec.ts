@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0.
 import { readFile } from "node:fs/promises";
 import { Converter } from "@twin.org/core";
-import { JsonConverterConnector } from "../../src/converters/jsonConverterConnector";
+import { JsonConverterConnector } from "../../src/converters/jsonConverterConnector.js";
 
 describe("JsonConverterConnector", () => {
 	test("Can fail when input is invalid JSON", async () => {

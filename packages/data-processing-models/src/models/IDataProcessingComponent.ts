@@ -1,7 +1,7 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 import type { IComponent } from "@twin.org/core";
-import type { IRuleGroup } from "./IRuleGroup";
+import type { IRuleGroup } from "./IRuleGroup.js";
 
 /**
  * Interface describing a component for processing data.
@@ -10,7 +10,7 @@ export interface IDataProcessingComponent extends IComponent {
 	/**
 	 * Set an extraction rule group.
 	 * @param ruleGroup The rule group to store.
-	 * @returns Nothing.
+	 * @returns A promise that resolves when the rule group has been stored.
 	 */
 	ruleGroupSet(ruleGroup: IRuleGroup): Promise<void>;
 
@@ -24,7 +24,7 @@ export interface IDataProcessingComponent extends IComponent {
 	/**
 	 * Remove a rule group.
 	 * @param ruleGroupId The id of the rule group to remove.
-	 * @returns Nothing.
+	 * @returns A promise that resolves when the rule group has been removed.
 	 */
 	ruleGroupRemove(ruleGroupId: string): Promise<void>;
 
@@ -53,14 +53,14 @@ export interface IDataProcessingComponent extends IComponent {
 
 	/**
 	 * Query the rule group entries.
-	 * @param cursor The cursor to request the next page of entities.
-	 * @param pageSize The maximum number of entities in a page.
+	 * @param cursor The cursor to request the next chunk of entities.
+	 * @param limit Limit the number of entities to return.
 	 * @returns All the entities for the storage matching the conditions,
 	 * and a cursor which can be used to request more entities.
 	 */
 	query(
 		cursor?: string,
-		pageSize?: number
+		limit?: number
 	): Promise<{
 		/**
 		 * The entities, which can be partial if a limited keys list was provided.

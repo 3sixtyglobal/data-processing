@@ -1,7 +1,7 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 import { Factory } from "@twin.org/core";
-import type { IDataConverterConnector } from "../models/IDataConverterConnector";
+import type { IDataConverterConnector } from "../models/IDataConverterConnector.js";
 
 /**
  * Factory for creating data converter connectors.

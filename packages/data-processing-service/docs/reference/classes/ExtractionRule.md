@@ -14,32 +14,32 @@ Class defining an extraction rule.
 
 ## Properties
 
-### source
+### source {#source}
 
 > **source**: `string`
 
-The source.
+The JSONPath expression identifying the source field in the input document.
 
 ***
 
-### target
+### target {#target}
 
 > **target**: `string`
 
-The target.
+The dotted path identifying where to store the extracted value in the output.
 
 ***
 
-### retainPathDepth?
+### retainPathDepth? {#retainpathdepth}
 
-> `optional` **retainPathDepth**: `number`
+> `optional` **retainPathDepth?**: `number`
 
-The retainPathDepth.
+The number of path segments from the source location to preserve in the target path.
 
 ***
 
-### coerce?
+### coerce? {#coerce}
 
-> `optional` **coerce**: `CoerceType`
+> `optional` **coerce?**: `CoerceType`
 
-The coercion to use.
+The type to coerce the extracted value to.

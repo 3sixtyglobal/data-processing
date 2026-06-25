@@ -1,6 +1,6 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import { JsonPathExtractorConnector } from "../../src/extractors/jsonPathExtractorConnector";
+import { JsonPathExtractorConnector } from "../../src/extractors/jsonPathExtractorConnector.js";
 
 describe("JsonPathExtractorConnector", () => {
 	test("Can output empty object with no extraction rules", async () => {
@@ -16,7 +16,7 @@ describe("JsonPathExtractorConnector", () => {
 		).rejects.toMatchObject({
 			name: "GeneralError",
 			message: "jsonPathExtractorConnector.invalidRule",
-			properties: { rule: "", reason: "can't backup beyond start ('':0)" }
+			properties: { rule: "" }
 		});
 	});
 
@@ -149,6 +149,40 @@ describe("JsonPathExtractorConnector", () => {
 				firstName: "John",
 				lastName: "Smith"
 			}
+		});
+	});
+
+	test("Can correctly retain a single value from wildcard array extraction", async () => {
+		const extractor = new JsonPathExtractorConnector();
+		const output = await extractor.extract(
+			{
+				store: {
+					books: [{ title: "The Hobbit", author: "J.R.R. Tolkien", price: 12.99 }]
+				}
+			},
+			[{ source: "$.store.books[*].title", target: "bookTitles" }]
+		);
+		expect(output).toEqual({
+			bookTitles: ["The Hobbit"]
+		});
+	});
+
+	test("Can correctly accumulate multiple values from wildcard array extraction", async () => {
+		const extractor = new JsonPathExtractorConnector();
+		const output = await extractor.extract(
+			{
+				store: {
+					books: [
+						{ title: "The Hobbit", author: "J.R.R. Tolkien", price: 12.99 },
+						{ title: "1984", author: "George Orwell", price: 8.99 },
+						{ title: "Dune", author: "Frank Herbert", price: 15.5 }
+					]
+				}
+			},
+			[{ source: "$.store.books[*].title", target: "bookTitles" }]
+		);
+		expect(output).toEqual({
+			bookTitles: ["The Hobbit", "1984", "Dune"]
 		});
 	});
 });

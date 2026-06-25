@@ -17,23 +17,32 @@ export class JsonConverterConnector implements IDataConverterConnector {
 	/**
 	 * Runtime name for the class.
 	 */
-	public readonly CLASS_NAME: string = nameof<JsonConverterConnector>();
+	public static readonly CLASS_NAME: string = nameof<JsonConverterConnector>();
 
 	/**
-	 * The MIME types that the converter can convert.
-	 * @returns The MIME types.
+	 * Returns the class name of the component.
+	 * @returns The class name of the component.
+	 */
+	public className(): string {
+		return JsonConverterConnector.CLASS_NAME;
+	}
+
+	/**
+	 * Returns the MIME types that this connector can convert.
+	 * @returns The supported MIME type strings.
 	 */
 	public mimeTypes(): string[] {
 		return [MimeTypes.Json, MimeTypes.JsonLd];
 	}
 
 	/**
-	 * Converts the data to a structured object.
-	 * @param data The data to extract from.
-	 * @returns The extracted data.
+	 * Converts the binary data to a structured object by parsing it as JSON.
+	 * @param data The binary data to convert.
+	 * @returns The parsed JSON object.
+	 * @throws GeneralError if the data cannot be parsed as valid JSON.
 	 */
 	public async convert(data: Uint8Array): Promise<unknown> {
-		Guards.uint8Array(this.CLASS_NAME, nameof(data), data);
+		Guards.uint8Array(JsonConverterConnector.CLASS_NAME, nameof(data), data);
 
 		let converted = {};
 
@@ -42,7 +51,7 @@ export class JsonConverterConnector implements IDataConverterConnector {
 				const jsonString = Converter.bytesToUtf8(data);
 				converted = JSON.parse(jsonString);
 			} catch (error) {
-				throw new GeneralError(this.CLASS_NAME, "invalidFormat", {
+				throw new GeneralError(JsonConverterConnector.CLASS_NAME, "invalidFormat", {
 					failure: BaseError.fromError(error).message
 				});
 			}

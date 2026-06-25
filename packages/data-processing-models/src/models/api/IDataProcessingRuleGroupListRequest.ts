@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0.
 
 /**
- * Get the a list of the rule group entries.
+ * Get a list of the rule group entries.
  */
 export interface IDataProcessingRuleGroupListRequest {
 	/**
@@ -15,8 +15,8 @@ export interface IDataProcessingRuleGroupListRequest {
 		cursor?: string;
 
 		/**
-		 * The maximum number of entities in a page.
+		 * Limit the number of entities to return.
 		 */
-		pageSize?: number | string;
+		limit?: string;
 	};
 }

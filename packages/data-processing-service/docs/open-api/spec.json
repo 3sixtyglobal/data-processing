@@ -1,5 +1,5 @@
 {
-	"openapi": "3.1.0",
+	"openapi": "3.1.1",
 	"info": {
 		"title": "TWIN - Test Endpoints",
 		"description": "REST API for TWIN - Test Endpoints.",
@@ -31,7 +31,7 @@
 				"parameters": [
 					{
 						"name": "id",
-						"description": "The rule id to set.",
+						"description": "The id of the rule group to set.",
 						"in": "path",
 						"required": true,
 						"schema": {
@@ -86,7 +86,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "GeneralError",
-											"message": "component.error",
+											"message": "errorMessage",
 											"properties": {
 												"foo": "bar"
 											}
@@ -107,7 +107,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "UnauthorizedError",
-											"message": "component.error"
+											"message": "errorMessage"
 										}
 									}
 								}
@@ -125,7 +125,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "InternalServerError",
-											"message": "component.error"
+											"message": "errorMessage"
 										}
 									}
 								}
@@ -143,7 +143,7 @@
 				"parameters": [
 					{
 						"name": "id",
-						"description": "The rule id to set.",
+						"description": "The id of the rule group to retrieve.",
 						"in": "path",
 						"required": true,
 						"schema": {
@@ -195,7 +195,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "GeneralError",
-											"message": "component.error",
+											"message": "errorMessage",
 											"properties": {
 												"foo": "bar"
 											}
@@ -216,7 +216,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "UnauthorizedError",
-											"message": "component.error"
+											"message": "errorMessage"
 										}
 									}
 								}
@@ -234,7 +234,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "InternalServerError",
-											"message": "component.error"
+											"message": "errorMessage"
 										}
 									}
 								}
@@ -252,7 +252,7 @@
 				"parameters": [
 					{
 						"name": "id",
-						"description": "The rule id to remove.",
+						"description": "The id of the rule group to remove.",
 						"in": "path",
 						"required": true,
 						"schema": {
@@ -282,7 +282,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "GeneralError",
-											"message": "component.error",
+											"message": "errorMessage",
 											"properties": {
 												"foo": "bar"
 											}
@@ -303,7 +303,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "UnauthorizedError",
-											"message": "component.error"
+											"message": "errorMessage"
 										}
 									}
 								}
@@ -321,7 +321,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "InternalServerError",
-											"message": "component.error"
+											"message": "errorMessage"
 										}
 									}
 								}
@@ -391,7 +391,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "GeneralError",
-											"message": "component.error",
+											"message": "errorMessage",
 											"properties": {
 												"foo": "bar"
 											}
@@ -412,7 +412,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "UnauthorizedError",
-											"message": "component.error"
+											"message": "errorMessage"
 										}
 									}
 								}
@@ -430,7 +430,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "InternalServerError",
-											"message": "component.error"
+											"message": "errorMessage"
 										}
 									}
 								}
@@ -499,7 +499,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "GeneralError",
-											"message": "component.error",
+											"message": "errorMessage",
 											"properties": {
 												"foo": "bar"
 											}
@@ -520,7 +520,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "UnauthorizedError",
-											"message": "component.error"
+											"message": "errorMessage"
 										}
 									}
 								}
@@ -538,7 +538,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "InternalServerError",
-											"message": "component.error"
+											"message": "errorMessage"
 										}
 									}
 								}
@@ -602,7 +602,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "GeneralError",
-											"message": "component.error",
+											"message": "errorMessage",
 											"properties": {
 												"foo": "bar"
 											}
@@ -623,7 +623,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "UnauthorizedError",
-											"message": "component.error"
+											"message": "errorMessage"
 										}
 									}
 								}
@@ -641,7 +641,7 @@
 									"exampleResponse": {
 										"value": {
 											"name": "InternalServerError",
-											"message": "component.error"
+											"message": "errorMessage"
 										}
 									}
 								}
@@ -655,59 +655,53 @@
 	"components": {
 		"schemas": {
 			"CoerceType": {
+				"description": "The types the extracted data can be coerced to.",
 				"anyOf": [
 					{
-						"type": "string",
 						"const": "string",
 						"description": "String."
 					},
 					{
-						"type": "string",
 						"const": "number",
 						"description": "Number."
 					},
 					{
-						"type": "string",
 						"const": "integer",
 						"description": "Integer."
 					},
 					{
-						"type": "string",
 						"const": "boolean",
 						"description": "Boolean."
 					},
 					{
-						"type": "string",
 						"const": "bigint",
 						"description": "Big Integer."
 					},
 					{
-						"type": "string",
 						"const": "date",
 						"description": "Date."
 					},
 					{
-						"type": "string",
 						"const": "datetime",
 						"description": "Date Time."
 					},
 					{
-						"type": "string",
 						"const": "time",
 						"description": "Time."
 					},
 					{
-						"type": "string",
 						"const": "object",
 						"description": "Object."
 					},
 					{
-						"type": "string",
 						"const": "uint8array",
 						"description": "Uint8Array."
+					},
+					{
+						"const": "duration",
+						"description": "Duration in seconds."
 					}
-				],
-				"description": "The types the extracted data can be coerced to."
+				]
 			},
 			"DataProcessingConvertRequest": {
 				"type": "object",
@@ -724,8 +718,7 @@
 				"required": [
 					"data"
 				],
-				"additionalProperties": false,
-				"description": "The params for the convert."
+				"description": "The request body containing the data to convert."
 			},
 			"DataProcessingConvertResponse": {
 				"description": "The converted data as an object."
@@ -754,23 +747,20 @@
 					"ruleGroupId",
 					"data"
 				],
-				"additionalProperties": false,
-				"description": "The params for the extract."
+				"description": "The request body containing the data and rule group to use for extraction."
 			},
 			"DataProcessingExtractResponse": {
-				"description": "The extracted data in extended JSON format which keeps types like bigint, dates and uint8array intact. Use ObjectHelper.fromExtended to get the object with original types."
+				"description": "The extracted data in extended JSON format, preserving types such as bigint, dates, and Uint8Array."
 			},
 			"DataProcessingRuleGroupListResponse": {
 				"type": "object",
 				"properties": {
 					"entities": {
 						"type": "array",
-						"description": "The entities, which can be partial if a limited keys list was provided.",
-						"prefixItems": [
-							{
-								"$ref": "#/components/schemas/RuleGroup"
-							}
-						]
+						"items": {
+							"$ref": "#/components/schemas/RuleGroup"
+						},
+						"description": "The entities, which can be partial if a limited keys list was provided."
 					},
 					"cursor": {
 						"type": "string",
@@ -780,8 +770,7 @@
 				"required": [
 					"entities"
 				],
-				"additionalProperties": false,
-				"description": "The response payload."
+				"description": "The response body containing the list of rule groups and optional pagination cursor."
 			},
 			"DataProcessingRuleGroupSetRequest": {
 				"type": "object",
@@ -792,22 +781,20 @@
 					},
 					"rules": {
 						"type": "array",
-						"description": "The rules.",
-						"prefixItems": [
-							{
-								"$ref": "#/components/schemas/Rule"
-							}
-						]
+						"items": {
+							"$ref": "#/components/schemas/Rule"
+						},
+						"description": "The rules."
 					}
 				},
 				"required": [
 					"label",
 					"rules"
 				],
-				"additionalProperties": false,
-				"description": "The data to be used in the store."
+				"description": "The rule group data to store."
 			},
 			"Error": {
+				"description": "Model to describe serialized error.",
 				"type": "object",
 				"properties": {
 					"name": {
@@ -816,7 +803,7 @@
 					},
 					"message": {
 						"type": "string",
-						"description": "The message for the error."
+						"description": "The message for the error as an i18n key."
 					},
 					"source": {
 						"type": "string",
@@ -831,27 +818,26 @@
 						"type": "string",
 						"description": "The stack trace for the error."
 					},
-					"inner": {
+					"cause": {
 						"$ref": "#/components/schemas/Error"
 					}
 				},
 				"required": [
 					"name",
 					"message"
-				],
-				"additionalProperties": false,
-				"description": "Model to describe serialized error."
+				]
 			},
 			"Rule": {
+				"description": "Rule defining how to extract data from an object.",
 				"type": "object",
 				"properties": {
 					"source": {
 						"type": "string",
-						"description": "The path to the data in the document to extract. should be in JSONPath format https://www.rfc-editor.org/rfc/rfc9535.html."
+						"description": "The JSONPath expression identifying the data to extract from the document."
 					},
 					"target": {
 						"type": "string",
-						"description": "The target path of where to store the extracted data. Supports simple dotted path notation, and numeric index notation."
+						"description": "The target path of where to store the extracted data, using dotted or numeric index notation."
 					},
 					"retainPathDepth": {
 						"type": "number",
@@ -864,11 +850,10 @@
 				"required": [
 					"source",
 					"target"
-				],
-				"additionalProperties": false,
-				"description": "Rule defining how to extract data from an object."
+				]
 			},
 			"RuleGroup": {
+				"description": "Group of rules for extraction.",
 				"type": "object",
 				"properties": {
 					"id": {
@@ -881,21 +866,17 @@
 					},
 					"rules": {
 						"type": "array",
-						"description": "The rules.",
-						"prefixItems": [
-							{
-								"$ref": "#/components/schemas/Rule"
-							}
-						]
+						"items": {
+							"$ref": "#/components/schemas/Rule"
+						},
+						"description": "The rules."
 					}
 				},
 				"required": [
 					"id",
 					"label",
 					"rules"
-				],
-				"additionalProperties": false,
-				"description": "Group of rules for extraction."
+				]
 			}
 		},
 		"securitySchemes": {

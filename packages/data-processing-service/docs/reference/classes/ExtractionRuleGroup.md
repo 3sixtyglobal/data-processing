@@ -14,24 +14,24 @@ Class defining an extraction rule group.
 
 ## Properties
 
-### id
+### id {#id}
 
 > **id**: `string`
 
-The id.
+The unique identifier for the rule group.
 
 ***
 
-### label
+### label {#label}
 
 > **label**: `string`
 
-The label.
+The human-readable label for the rule group.
 
 ***
 
-### rules
+### rules {#rules}
 
 > **rules**: [`ExtractionRule`](ExtractionRule.md)[]
 
-The rules.
+The extraction rules that belong to this group.

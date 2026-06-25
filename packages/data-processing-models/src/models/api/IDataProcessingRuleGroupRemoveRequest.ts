@@ -6,11 +6,11 @@
  */
 export interface IDataProcessingRuleGroupRemoveRequest {
 	/**
-	 * The parameters to be used in the remove.
+	 * The path parameters for the request.
 	 */
 	pathParams: {
 		/**
-		 * The rule id to remove.
+		 * The id of the rule group to remove.
 		 */
 		id: string;
 	};

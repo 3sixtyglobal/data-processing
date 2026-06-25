@@ -7,15 +7,13 @@ import type { CoerceType } from "@twin.org/core";
  */
 export interface IExtractRule {
 	/**
-	 * The path to the data in the document to extract.
-	 * should be in JSONPath format https://www.rfc-editor.org/rfc/rfc9535.html.
+	 * The JSONPath expression identifying the data to extract from the document.
+	 * @see https://www.rfc-editor.org/rfc/rfc9535.html
 	 */
 	source: string;
 
 	/**
-	 * The target path of where to store the extracted data.
-	 * Supports simple dotted path notation, and numeric index notation.
-	 * @example "path.to.data" or "path.to.data.0"
+	 * The target path of where to store the extracted data, using dotted or numeric index notation.
 	 */
 	target: string;
 

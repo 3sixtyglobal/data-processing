@@ -6,7 +6,7 @@
  */
 export interface IDataProcessingExtractRequest {
 	/**
-	 * The params for the extract.
+	 * The request body containing the data and rule group to use for extraction.
 	 */
 	body: {
 		/**

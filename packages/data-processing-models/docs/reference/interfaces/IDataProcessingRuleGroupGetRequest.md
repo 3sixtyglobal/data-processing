@@ -4,14 +4,14 @@ Get a rule group.
 
 ## Properties
 
-### pathParams
+### pathParams {#pathparams}
 
 > **pathParams**: `object`
 
-The parameters to be used in the set.
+The path parameters for the request.
 
 #### id
 
 > **id**: `string`
 
-The rule id to set.
+The id of the rule group to retrieve.

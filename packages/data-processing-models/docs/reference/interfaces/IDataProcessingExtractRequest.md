@@ -4,11 +4,11 @@ Perform an extraction on the data with the specified ruleset.
 
 ## Properties
 
-### body
+### body {#body}
 
 > **body**: `object`
 
-The params for the extract.
+The request body containing the data and rule group to use for extraction.
 
 #### ruleGroupId
 
@@ -24,12 +24,12 @@ The binary data to extract from in base64.
 
 #### overrideExtractorType?
 
-> `optional` **overrideExtractorType**: `string`
+> `optional` **overrideExtractorType?**: `string`
 
 The default extractor connector will be used if not specified.
 
 #### overrideMimeType?
 
-> `optional` **overrideMimeType**: `string`
+> `optional` **overrideMimeType?**: `string`
 
 An optional override for the mime type for conversion, will auto detect if not provided.

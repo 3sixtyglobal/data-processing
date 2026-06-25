@@ -18,7 +18,7 @@ Class for extracting data from a JSON source.
 
 ## Properties
 
-### NAMESPACE
+### NAMESPACE {#namespace}
 
 > `readonly` `static` **NAMESPACE**: `string` = `"json-path"`
 
@@ -26,19 +26,33 @@ The namespace supported by the data extractor connector.
 
 ***
 
-### CLASS\_NAME
+### CLASS\_NAME {#class_name}
 
-> `readonly` **CLASS\_NAME**: `string`
+> `readonly` `static` **CLASS\_NAME**: `string`
 
 Runtime name for the class.
 
-#### Implementation of
-
-`IDataExtractorConnector.CLASS_NAME`
-
 ## Methods
 
-### extract()
+### className() {#classname}
+
+> **className**(): `string`
+
+Returns the class name of the component.
+
+#### Returns
+
+`string`
+
+The class name of the component.
+
+#### Implementation of
+
+`IDataExtractorConnector.className`
+
+***
+
+### extract() {#extract}
 
 > **extract**(`data`, `rules`): `Promise`\<`unknown`\>
 

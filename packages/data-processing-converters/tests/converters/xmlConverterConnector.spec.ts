@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0.
 import { readFile } from "node:fs/promises";
 import { Converter } from "@twin.org/core";
-import { XmlConverterConnector } from "../../src/converters/xmlConverterConnector";
+import { XmlConverterConnector } from "../../src/converters/xmlConverterConnector.js";
 
 describe("XmlConverterConnector", () => {
 	test("Can fail when input is invalid xml", async () => {

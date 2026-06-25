@@ -26,29 +26,39 @@ The options for the connector.
 
 `DataProcessingService`
 
+#### Throws
+
+If no extractor connector is registered.
+
 ## Properties
 
-### NAMESPACE
+### CLASS\_NAME {#class_name}
 
-> `readonly` `static` **NAMESPACE**: `string` = `"data-processing"`
-
-The namespace supported by the data processing service.
-
-***
-
-### CLASS\_NAME
-
-> `readonly` **CLASS\_NAME**: `string`
+> `readonly` `static` **CLASS\_NAME**: `string`
 
 Runtime name for the class.
 
-#### Implementation of
-
-`IDataProcessingComponent.CLASS_NAME`
-
 ## Methods
 
-### ruleGroupSet()
+### className() {#classname}
+
+> **className**(): `string`
+
+Returns the class name of the component.
+
+#### Returns
+
+`string`
+
+The class name of the component.
+
+#### Implementation of
+
+`IDataProcessingComponent.className`
+
+***
+
+### ruleGroupSet() {#rulegroupset}
 
 > **ruleGroupSet**(`ruleGroup`): `Promise`\<`void`\>
 
@@ -66,7 +76,7 @@ The rule group to store.
 
 `Promise`\<`void`\>
 
-Nothing.
+A promise that resolves when the rule group has been stored.
 
 #### Implementation of
 
@@ -74,7 +84,7 @@ Nothing.
 
 ***
 
-### ruleGroupGet()
+### ruleGroupGet() {#rulegroupget}
 
 > **ruleGroupGet**(`ruleGroupId`): `Promise`\<`IRuleGroup`\>
 
@@ -100,7 +110,7 @@ The rule group.
 
 ***
 
-### ruleGroupRemove()
+### ruleGroupRemove() {#rulegroupremove}
 
 > **ruleGroupRemove**(`ruleGroupId`): `Promise`\<`void`\>
 
@@ -118,7 +128,7 @@ The id of the rule group to remove.
 
 `Promise`\<`void`\>
 
-Nothing.
+A promise that resolves when the rule group has been removed.
 
 #### Implementation of
 
@@ -126,11 +136,11 @@ Nothing.
 
 ***
 
-### extract()
+### extract() {#extract}
 
 > **extract**(`ruleGroupId`, `data`, `overrideExtractorType?`, `overrideMimeType?`): `Promise`\<`unknown`\>
 
-Extracts data from the from the provided input.
+Extracts data from the provided input.
 
 #### Parameters
 
@@ -170,7 +180,7 @@ The extracted data.
 
 ***
 
-### convert()
+### convert() {#convert}
 
 > **convert**(`data`, `overrideMimeType?`): `Promise`\<`unknown`\>
 
@@ -202,9 +212,9 @@ The converted data.
 
 ***
 
-### query()
+### query() {#query}
 
-> **query**(`cursor?`, `pageSize?`): `Promise`\<\{ `entities`: `IRuleGroup`[]; `cursor?`: `string`; \}\>
+> **query**(`cursor?`, `limit?`): `Promise`\<\{ `entities`: `IRuleGroup`[]; `cursor?`: `string`; \}\>
 
 Query the rule group entries.
 
@@ -214,13 +224,13 @@ Query the rule group entries.
 
 `string`
 
-The cursor to request the next page of entities.
+The cursor to request the next chunk of entities.
 
-##### pageSize?
+##### limit?
 
 `number`
 
-The maximum number of entities in a page.
+Limit the number of entities to return.
 
 #### Returns
 

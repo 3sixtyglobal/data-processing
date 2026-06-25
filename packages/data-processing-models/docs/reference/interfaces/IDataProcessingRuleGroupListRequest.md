@@ -1,23 +1,23 @@
 # Interface: IDataProcessingRuleGroupListRequest
 
-Get the a list of the rule group entries.
+Get a list of the rule group entries.
 
 ## Properties
 
-### query?
+### query? {#query}
 
-> `optional` **query**: `object`
+> `optional` **query?**: `object`
 
 The query parameters.
 
 #### cursor?
 
-> `optional` **cursor**: `string`
+> `optional` **cursor?**: `string`
 
 The optional cursor to get next chunk.
 
-#### pageSize?
+#### limit?
 
-> `optional` **pageSize**: `string` \| `number`
+> `optional` **limit?**: `string`
 
-The maximum number of entities in a page.
+Limit the number of entities to return.

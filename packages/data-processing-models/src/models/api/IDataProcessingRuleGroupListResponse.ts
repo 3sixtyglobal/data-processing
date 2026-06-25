@@ -1,13 +1,13 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import type { IRuleGroup } from "../IRuleGroup";
+import type { IRuleGroup } from "../IRuleGroup.js";
 
 /**
  * Response for rule group entry list request.
  */
 export interface IDataProcessingRuleGroupListResponse {
 	/**
-	 * The response payload.
+	 * The response body containing the list of rule groups and optional pagination cursor.
 	 */
 	body: {
 		/**

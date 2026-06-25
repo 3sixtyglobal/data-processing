@@ -18,7 +18,7 @@ Class for converting data to XML from bytes.
 
 ## Properties
 
-### NAMESPACE
+### NAMESPACE {#namespace}
 
 > `readonly` `static` **NAMESPACE**: `string` = `"xml"`
 
@@ -26,29 +26,43 @@ The namespace supported by the data converter connector.
 
 ***
 
-### CLASS\_NAME
+### CLASS\_NAME {#class_name}
 
-> `readonly` **CLASS\_NAME**: `string`
+> `readonly` `static` **CLASS\_NAME**: `string`
 
 Runtime name for the class.
 
-#### Implementation of
-
-`IDataConverterConnector.CLASS_NAME`
-
 ## Methods
 
-### mimeTypes()
+### className() {#classname}
+
+> **className**(): `string`
+
+Returns the class name of the component.
+
+#### Returns
+
+`string`
+
+The class name of the component.
+
+#### Implementation of
+
+`IDataConverterConnector.className`
+
+***
+
+### mimeTypes() {#mimetypes}
 
 > **mimeTypes**(): `string`[]
 
-The MIME types that the converter can convert.
+Returns the MIME types that this connector can convert.
 
 #### Returns
 
 `string`[]
 
-The MIME types.
+The supported MIME type strings.
 
 #### Implementation of
 
@@ -56,11 +70,11 @@ The MIME types.
 
 ***
 
-### convert()
+### convert() {#convert}
 
 > **convert**(`data`): `Promise`\<`unknown`\>
 
-Converts the data to a structured object.
+Converts the binary data to a structured object by parsing it as XML.
 
 #### Parameters
 
@@ -68,13 +82,17 @@ Converts the data to a structured object.
 
 `Uint8Array`
 
-The data to extract from.
+The binary data to convert.
 
 #### Returns
 
 `Promise`\<`unknown`\>
 
-The extracted data.
+The parsed object representation of the XML.
+
+#### Throws
+
+GeneralError if the data cannot be parsed as valid XML.
 
 #### Implementation of
 

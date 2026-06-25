@@ -1,4 +1,4 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-export * from "./converters/jsonConverterConnector";
-export * from "./converters/xmlConverterConnector";
+export * from "./converters/jsonConverterConnector.js";
+export * from "./converters/xmlConverterConnector.js";

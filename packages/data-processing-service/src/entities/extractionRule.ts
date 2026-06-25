@@ -9,25 +9,25 @@ import { entity, property } from "@twin.org/entity";
 @entity()
 export class ExtractionRule {
 	/**
-	 * The source.
+	 * The JSONPath expression identifying the source field in the input document.
 	 */
 	@property({ type: "string" })
 	public source!: string;
 
 	/**
-	 * The target.
+	 * The dotted path identifying where to store the extracted value in the output.
 	 */
 	@property({ type: "string" })
 	public target!: string;
 
 	/**
-	 * The retainPathDepth.
+	 * The number of path segments from the source location to preserve in the target path.
 	 */
 	@property({ type: "number", optional: true })
 	public retainPathDepth?: number;
 
 	/**
-	 * The coercion to use.
+	 * The type to coerce the extracted value to.
 	 */
 	@property({ type: "string", optional: true })
 	public coerce?: CoerceType;

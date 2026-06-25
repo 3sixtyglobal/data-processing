@@ -10,9 +10,9 @@ import {
 import { MemoryEntityStorageConnector } from "@twin.org/entity-storage-connector-memory";
 import { EntityStorageConnectorFactory } from "@twin.org/entity-storage-models";
 import { nameof } from "@twin.org/nameof";
-import { DataProcessingService } from "../src/dataProcessingService";
-import type { ExtractionRuleGroup } from "../src/entities/extractionRuleGroup";
-import { initSchema } from "../src/schema";
+import { DataProcessingService } from "../src/dataProcessingService.js";
+import type { ExtractionRuleGroup } from "../src/entities/extractionRuleGroup.js";
+import { initSchema } from "../src/schema.js";
 
 let extractRuleGroupEntityStorage: MemoryEntityStorageConnector<ExtractionRuleGroup>;
 
@@ -20,7 +20,8 @@ describe("DataProcessingService", () => {
 	beforeEach(() => {
 		initSchema();
 		extractRuleGroupEntityStorage = new MemoryEntityStorageConnector<ExtractionRuleGroup>({
-			entitySchema: nameof<ExtractionRuleGroup>()
+			entitySchema: nameof<ExtractionRuleGroup>(),
+			config: { storageKey: "extraction-rule-group" }
 		});
 		EntityStorageConnectorFactory.register(
 			"extraction-rule-group",

@@ -1,6 +1,6 @@
 # TWIN Data Processing Converters
 
-Data converter connector implementations.
+Connector implementations that convert source data into canonical processing formats.
 
 ## Installation
 

@@ -4,7 +4,7 @@ Get a rule group response.
 
 ## Properties
 
-### body
+### body {#body}
 
 > **body**: [`IRuleGroup`](IRuleGroup.md)
 

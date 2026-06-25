@@ -8,7 +8,7 @@ Interface describing a connector for extracting data.
 
 ## Methods
 
-### extract()
+### extract() {#extract}
 
 > **extract**(`data`, `rules`): `Promise`\<`unknown`\>
 
