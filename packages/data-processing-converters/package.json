@@ -1,6 +1,6 @@
 {
 	"name": "@twin.org/data-processing-converters",
-	"version": "0.9.0-next.1",
+	"version": "0.9.0",
 	"description": "Connector implementations that convert source data into canonical processing formats",
 	"repository": {
 		"type": "git",
@@ -29,16 +29,16 @@
 		"dist:no-test": "npm run clean && npm run build && npm run test:build"
 	},
 	"dependencies": {
-		"@twin.org/core": "next",
-		"@twin.org/data-processing-models": "0.9.0-next.1",
-		"@twin.org/nameof": "next",
-		"@twin.org/web": "next",
+		"@twin.org/core": "^0.9.0",
+		"@twin.org/data-processing-models": "^0.9.0",
+		"@twin.org/nameof": "^0.9.0",
+		"@twin.org/web": "^0.9.0",
 		"xml2js": "0.6.2"
 	},
 	"devDependencies": {
-		"@twin.org/nameof-transformer": "next",
-		"@twin.org/nameof-vitest-plugin": "next",
-		"@twin.org/validate-locales": "next",
+		"@twin.org/nameof-transformer": "^0.9.0",
+		"@twin.org/nameof-vitest-plugin": "^0.9.0",
+		"@twin.org/validate-locales": "^0.9.0",
 		"@types/node": "26.0.0",
 		"@types/xml2js": "0.4.14",
 		"@vitest/coverage-v8": "4.1.9",
