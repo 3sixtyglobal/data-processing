@@ -19,6 +19,7 @@ import type {
 	IRuleGroup
 } from "@twin.org/data-processing-models";
 import { nameof } from "@twin.org/nameof";
+import { HttpMethod } from "@twin.org/web";
 
 /**
  * Client for performing data processing through to REST endpoints.
@@ -66,7 +67,7 @@ export class DataProcessingRestClient extends BaseRestClient implements IDataPro
 
 		await this.fetch<IDataProcessingRuleGroupSetRequest, INoContentResponse>(
 			"/rule-group/:id",
-			"PUT",
+			HttpMethod.PUT,
 			{
 				pathParams: {
 					id: ruleGroup.id
@@ -90,7 +91,7 @@ export class DataProcessingRestClient extends BaseRestClient implements IDataPro
 		const response = await this.fetch<
 			IDataProcessingRuleGroupGetRequest,
 			IDataProcessingRuleGroupGetResponse
-		>("/rule-group/:id", "GET", {
+		>("/rule-group/:id", HttpMethod.GET, {
 			pathParams: {
 				id: ruleGroupId
 			}
@@ -109,7 +110,7 @@ export class DataProcessingRestClient extends BaseRestClient implements IDataPro
 
 		await this.fetch<IDataProcessingRuleGroupRemoveRequest, INoContentResponse>(
 			"/rule-group/:id",
-			"DELETE",
+			HttpMethod.DELETE,
 			{
 				pathParams: {
 					id: ruleGroupId
@@ -137,7 +138,7 @@ export class DataProcessingRestClient extends BaseRestClient implements IDataPro
 
 		const result = await this.fetch<IDataProcessingExtractRequest, IDataProcessingExtractResponse>(
 			"/extract",
-			"POST",
+			HttpMethod.POST,
 			{
 				body: {
 					ruleGroupId,
@@ -162,7 +163,7 @@ export class DataProcessingRestClient extends BaseRestClient implements IDataPro
 
 		const result = await this.fetch<IDataProcessingConvertRequest, IDataProcessingConvertResponse>(
 			"/convert",
-			"POST",
+			HttpMethod.POST,
 			{
 				body: {
 					data: Converter.bytesToBase64(data),
@@ -197,7 +198,7 @@ export class DataProcessingRestClient extends BaseRestClient implements IDataPro
 		const response = await this.fetch<
 			IDataProcessingRuleGroupListRequest,
 			IDataProcessingRuleGroupListResponse
-		>("/rule-group", "GET", {
+		>("/rule-group", HttpMethod.GET, {
 			query: {
 				cursor,
 				limit: Coerce.string(limit)
