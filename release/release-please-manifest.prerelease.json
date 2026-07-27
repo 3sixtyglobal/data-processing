@@ -1,7 +1,7 @@
 {
-	"packages/data-processing-models": "0.9.1-next.2",
-	"packages/data-processing-converters": "0.9.1-next.2",
-	"packages/data-processing-extractors": "0.9.1-next.2",
-	"packages/data-processing-service": "0.9.1-next.2",
-	"packages/data-processing-rest-client": "0.9.1-next.2"
+	"packages/data-processing-models": "0.9.2-next.0",
+	"packages/data-processing-converters": "0.9.2-next.0",
+	"packages/data-processing-extractors": "0.9.2-next.0",
+	"packages/data-processing-service": "0.9.2-next.0",
+	"packages/data-processing-rest-client": "0.9.2-next.0"
 }
