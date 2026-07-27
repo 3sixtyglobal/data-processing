@@ -1,5 +1,55 @@
 # Changelog
 
+## [0.9.1-next.2](https://github.com/iotaledger/twin-data-processing/compare/data-processing-service-v0.9.1-next.1...data-processing-service-v0.9.1-next.2) (2026-06-29)
+
+
+### Miscellaneous Chores
+
+* **data-processing-service:** Synchronize repo versions
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.9.1-next.1 to 0.9.1-next.2
+  * devDependencies
+    * @twin.org/data-processing-converters bumped from 0.9.1-next.1 to 0.9.1-next.2
+    * @twin.org/data-processing-extractors bumped from 0.9.1-next.1 to 0.9.1-next.2
+
+## [0.9.1-next.1](https://github.com/iotaledger/twin-data-processing/compare/data-processing-service-v0.9.1-next.0...data-processing-service-v0.9.1-next.1) (2026-06-26)
+
+
+### Features
+
+* add context id features ([#25](https://github.com/iotaledger/twin-data-processing/issues/25)) ([2a2a955](https://github.com/iotaledger/twin-data-processing/commit/2a2a9559d54e8c703e97e2c05996e678416ef560))
+* Add rule group query functionality ([#2](https://github.com/iotaledger/twin-data-processing/issues/2)) ([0fbbfb0](https://github.com/iotaledger/twin-data-processing/commit/0fbbfb065b6ecc293920b25f97ba011743105486))
+* add validate-locales ([9af0874](https://github.com/iotaledger/twin-data-processing/commit/9af0874cd3f44a4cfca514dde8380f002e62337e))
+* eslint migration to flat config ([a8138b0](https://github.com/iotaledger/twin-data-processing/commit/a8138b020ed58baeff162a822d4df207a6aeadc4))
+* pass the mimeTypeOverride through the component extract method ([#9](https://github.com/iotaledger/twin-data-processing/issues/9)) ([a2b36de](https://github.com/iotaledger/twin-data-processing/commit/a2b36de5c19c56e4172d3f22b176aa83e1df84c8))
+* remove unused namespace ([42c50ae](https://github.com/iotaledger/twin-data-processing/commit/42c50ae5d860f74e9964a91cefc0aef504b7dc2b))
+* typescript 6 update ([b67debb](https://github.com/iotaledger/twin-data-processing/commit/b67debb8aff83c0f3b179c6db038ed733f7308b1))
+* update dependencies ([0b2e77d](https://github.com/iotaledger/twin-data-processing/commit/0b2e77d673ede6e92847ff0b50fdfcf4e9c08b3b))
+* update dependencies ([21b8e80](https://github.com/iotaledger/twin-data-processing/commit/21b8e8007c87136a09f0a8e35ffde13a07ff4711))
+* update framework core ([96f6e80](https://github.com/iotaledger/twin-data-processing/commit/96f6e8016a4ef0fb873f6775e750b4ab42e9f491))
+* use shared store mechanism ([#6](https://github.com/iotaledger/twin-data-processing/issues/6)) ([6009228](https://github.com/iotaledger/twin-data-processing/commit/600922880acef07cc2f818dee7645c342929108b))
+
+
+### Bug Fixes
+
+* locale properties ([dcff09f](https://github.com/iotaledger/twin-data-processing/commit/dcff09f00189b0cfa64968d55c6d2c01cdf8db79))
+* use async getStore in tests ([263f370](https://github.com/iotaledger/twin-data-processing/commit/263f370c3490fb4fd0d93c6ca1fb53cd7cc56fa4))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.9.1-next.0 to 0.9.1-next.1
+  * devDependencies
+    * @twin.org/data-processing-converters bumped from 0.9.1-next.0 to 0.9.1-next.1
+    * @twin.org/data-processing-extractors bumped from 0.9.1-next.0 to 0.9.1-next.1
+
 ## [0.9.0](https://github.com/iotaledger/twin-data-processing/compare/data-processing-service-v0.9.0...data-processing-service-v0.9.0) (2026-06-25)
 
 
