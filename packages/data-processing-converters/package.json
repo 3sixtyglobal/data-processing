@@ -39,7 +39,7 @@
 		"@twin.org/nameof-transformer": "next",
 		"@twin.org/nameof-vitest-plugin": "next",
 		"@twin.org/validate-locales": "next",
-		"@types/node": "26.1.1",
+		"@types/node": "26.1.2",
 		"@types/xml2js": "0.4.14",
 		"@vitest/coverage-v8": "4.1.10",
 		"copyfiles": "2.4.1",
