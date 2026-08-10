@@ -56,6 +56,7 @@ export class JsonPathExtractorConnector implements IDataExtractorConnector {
 	 */
 	private extractValue(jsonObject: unknown, rule: IRule, outputObject: unknown): void {
 		try {
+			Guards.stringValue(JsonPathExtractorConnector.CLASS_NAME, nameof(rule.target), rule.target);
 			const jsonNodes = JsonPathHelper.query(rule.source, jsonObject);
 
 			const ruleParts = rule.source.split(".");
