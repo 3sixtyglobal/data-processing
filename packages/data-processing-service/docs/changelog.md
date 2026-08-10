@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.9.2-next.2](https://github.com/iotaledger/twin-data-processing/compare/data-processing-service-v0.9.2-next.1...data-processing-service-v0.9.2-next.2) (2026-08-10)
+
+
+### Miscellaneous Chores
+
+* **data-processing-service:** Synchronize repo versions
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.9.2-next.1 to 0.9.2-next.2
+  * devDependencies
+    * @twin.org/data-processing-converters bumped from 0.9.2-next.1 to 0.9.2-next.2
+    * @twin.org/data-processing-extractors bumped from 0.9.2-next.1 to 0.9.2-next.2
+
 ## [0.9.2-next.1](https://github.com/iotaledger/twin-data-processing/compare/data-processing-service-v0.9.2-next.0...data-processing-service-v0.9.2-next.1) (2026-08-07)
 
 

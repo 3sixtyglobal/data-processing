@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.9.2-next.2](https://github.com/iotaledger/twin-data-processing/compare/data-processing-extractors-v0.9.2-next.1...data-processing-extractors-v0.9.2-next.2) (2026-08-10)
+
+
+### Features
+
+* add rule.target guard ([6d7a1c0](https://github.com/iotaledger/twin-data-processing/commit/6d7a1c0182c5a621c1fb6fb5d522b5dc670ab35e))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.9.2-next.1 to 0.9.2-next.2
+
 ## [0.9.2-next.1](https://github.com/iotaledger/twin-data-processing/compare/data-processing-extractors-v0.9.2-next.0...data-processing-extractors-v0.9.2-next.1) (2026-08-07)
 
 
