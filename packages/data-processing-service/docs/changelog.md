@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.9.2-next.3](https://github.com/iotaledger/twin-data-processing/compare/data-processing-service-v0.9.2-next.2...data-processing-service-v0.9.2-next.3) (2026-08-20)
+
+
+### Features
+
+* allow large payloads on the extract and convert routes ([#49](https://github.com/iotaledger/twin-data-processing/issues/49)) ([7c23736](https://github.com/iotaledger/twin-data-processing/commit/7c237368d5d607670d8528035c359e60fb03136c))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.9.2-next.2 to 0.9.2-next.3
+  * devDependencies
+    * @twin.org/data-processing-converters bumped from 0.9.2-next.2 to 0.9.2-next.3
+    * @twin.org/data-processing-extractors bumped from 0.9.2-next.2 to 0.9.2-next.3
+
 ## [0.9.2-next.2](https://github.com/iotaledger/twin-data-processing/compare/data-processing-service-v0.9.2-next.1...data-processing-service-v0.9.2-next.2) (2026-08-10)
 
 

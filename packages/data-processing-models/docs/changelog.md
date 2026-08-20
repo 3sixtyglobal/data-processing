@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.2-next.3](https://github.com/iotaledger/twin-data-processing/compare/data-processing-models-v0.9.2-next.2...data-processing-models-v0.9.2-next.3) (2026-08-20)
+
+
+### Miscellaneous Chores
+
+* **data-processing-models:** Synchronize repo versions
+
 ## [0.9.2-next.2](https://github.com/iotaledger/twin-data-processing/compare/data-processing-models-v0.9.2-next.1...data-processing-models-v0.9.2-next.2) (2026-08-10)
 
 
