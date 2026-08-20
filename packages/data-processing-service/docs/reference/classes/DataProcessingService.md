@@ -28,7 +28,7 @@ The options for the connector.
 
 #### Throws
 
-If no extractor connector is registered.
+GeneralError If no extractor connector is registered.
 
 ## Properties
 

@@ -700,6 +700,10 @@
 					{
 						"const": "duration",
 						"description": "Duration in seconds."
+					},
+					{
+						"const": "array",
+						"description": "Array."
 					}
 				]
 			},
