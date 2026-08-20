@@ -1,10 +1,11 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import type {
-	IHttpRequestContext,
-	INoContentResponse,
-	IRestRoute,
-	ITag
+import {
+	HttpBodyLimit,
+	type IHttpRequestContext,
+	type INoContentResponse,
+	type IRestRoute,
+	type ITag
 } from "@twin.org/api-models";
 import { Coerce, CoerceType, ComponentFactory, Converter, Guards } from "@twin.org/core";
 import type {
@@ -189,6 +190,7 @@ export function generateRestRoutesDataProcessing(
 		tag: tagsDataProcessing[0].name,
 		method: "POST",
 		path: `${baseRouteName}/extract`,
+		bodyLimit: HttpBodyLimit.Large,
 		handler: async (httpRequestContext, request) =>
 			dataProcessingExtract(httpRequestContext, componentName, request),
 		requestType: {
@@ -226,6 +228,7 @@ export function generateRestRoutesDataProcessing(
 		tag: tagsDataProcessing[0].name,
 		method: "POST",
 		path: `${baseRouteName}/convert`,
+		bodyLimit: HttpBodyLimit.Large,
 		handler: async (httpRequestContext, request) =>
 			dataProcessingConvert(httpRequestContext, componentName, request),
 		requestType: {
