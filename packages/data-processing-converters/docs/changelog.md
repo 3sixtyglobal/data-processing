@@ -1,5 +1,56 @@
 # Changelog
 
+## [0.9.2-next.3](https://github.com/iotaledger/twin-data-processing/compare/data-processing-converters-v0.9.2-next.2...data-processing-converters-v0.9.2-next.3) (2026-08-20)
+
+
+### Miscellaneous Chores
+
+* **data-processing-converters:** Synchronize repo versions
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.9.2-next.2 to 0.9.2-next.3
+
+## [0.9.2-next.2](https://github.com/iotaledger/twin-data-processing/compare/data-processing-converters-v0.9.2-next.1...data-processing-converters-v0.9.2-next.2) (2026-08-10)
+
+
+### Miscellaneous Chores
+
+* **data-processing-converters:** Synchronize repo versions
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.9.2-next.1 to 0.9.2-next.2
+
+## [0.9.2-next.1](https://github.com/iotaledger/twin-data-processing/compare/data-processing-converters-v0.9.2-next.0...data-processing-converters-v0.9.2-next.1) (2026-08-07)
+
+
+### Features
+
+* add context id features ([#25](https://github.com/iotaledger/twin-data-processing/issues/25)) ([2a2a955](https://github.com/iotaledger/twin-data-processing/commit/2a2a9559d54e8c703e97e2c05996e678416ef560))
+* Add rule group query functionality ([#2](https://github.com/iotaledger/twin-data-processing/issues/2)) ([0fbbfb0](https://github.com/iotaledger/twin-data-processing/commit/0fbbfb065b6ecc293920b25f97ba011743105486))
+* add validate-locales ([9af0874](https://github.com/iotaledger/twin-data-processing/commit/9af0874cd3f44a4cfca514dde8380f002e62337e))
+* eslint migration to flat config ([a8138b0](https://github.com/iotaledger/twin-data-processing/commit/a8138b020ed58baeff162a822d4df207a6aeadc4))
+* linting and dependency update ([06a8f5d](https://github.com/iotaledger/twin-data-processing/commit/06a8f5d1aa326e6212c21d3b387fad25e3b54b41))
+* typescript 6 update ([b67debb](https://github.com/iotaledger/twin-data-processing/commit/b67debb8aff83c0f3b179c6db038ed733f7308b1))
+* update dependencies ([0b2e77d](https://github.com/iotaledger/twin-data-processing/commit/0b2e77d673ede6e92847ff0b50fdfcf4e9c08b3b))
+* update dependencies ([21b8e80](https://github.com/iotaledger/twin-data-processing/commit/21b8e8007c87136a09f0a8e35ffde13a07ff4711))
+* update framework core ([96f6e80](https://github.com/iotaledger/twin-data-processing/commit/96f6e8016a4ef0fb873f6775e750b4ab42e9f491))
+* use shared store mechanism ([#6](https://github.com/iotaledger/twin-data-processing/issues/6)) ([6009228](https://github.com/iotaledger/twin-data-processing/commit/600922880acef07cc2f818dee7645c342929108b))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/data-processing-models bumped from 0.9.2-next.0 to 0.9.2-next.1
+
 ## [0.9.1](https://github.com/iotaledger/twin-data-processing/compare/data-processing-converters-v0.9.1...data-processing-converters-v0.9.1) (2026-07-27)
 
 
