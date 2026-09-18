@@ -11,13 +11,13 @@ export class ExtractionRule {
 	/**
 	 * The JSONPath expression identifying the source field in the input document.
 	 */
-	@property({ type: "string" })
+	@property({ type: "string", maxLength: 2048 })
 	public source!: string;
 
 	/**
 	 * The dotted path identifying where to store the extracted value in the output.
 	 */
-	@property({ type: "string" })
+	@property({ type: "string", maxLength: 2048 })
 	public target!: string;
 
 	/**
@@ -29,6 +29,6 @@ export class ExtractionRule {
 	/**
 	 * The type to coerce the extracted value to.
 	 */
-	@property({ type: "string", optional: true })
+	@property({ type: "string", maxLength: 16, optional: true })
 	public coerce?: CoerceType;
 }

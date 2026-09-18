@@ -11,13 +11,13 @@ export class ExtractionRuleGroup {
 	/**
 	 * The unique identifier for the rule group.
 	 */
-	@property({ type: "string", isPrimary: true })
+	@property({ type: "string", isPrimary: true, maxLength: 255 })
 	public id!: string;
 
 	/**
 	 * The human-readable label for the rule group.
 	 */
-	@property({ type: "string" })
+	@property({ type: "string", maxLength: 256 })
 	public label!: string;
 
 	/**
