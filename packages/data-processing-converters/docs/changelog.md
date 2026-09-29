@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.11.0](https://github.com/iotaledger/twin-data-processing/compare/data-processing-converters-v0.11.0...data-processing-converters-v0.11.0) (2026-09-29)
+
+
+### Features
+
+* Add rule group query functionality ([#2](https://github.com/iotaledger/twin-data-processing/issues/2)) ([0fbbfb0](https://github.com/iotaledger/twin-data-processing/commit/0fbbfb065b6ecc293920b25f97ba011743105486))
+* release to production ([531ba89](https://github.com/iotaledger/twin-data-processing/commit/531ba89dea2deb2810870b72851dca3081f9d2ce))
+* release to production ([#35](https://github.com/iotaledger/twin-data-processing/issues/35)) ([b712976](https://github.com/iotaledger/twin-data-processing/commit/b712976f1a72061801d0edf5fa50cb1baf8b6393))
+* release to production ([#43](https://github.com/iotaledger/twin-data-processing/issues/43)) ([1e665c6](https://github.com/iotaledger/twin-data-processing/commit/1e665c639bf88b2155d635b1779303504bfbfa77))
+* release to production ([#54](https://github.com/iotaledger/twin-data-processing/issues/54)) ([02fe833](https://github.com/iotaledger/twin-data-processing/commit/02fe83324434d23242bc6da950ea8311d716739f))
+* release to production [skip ci] ([#59](https://github.com/iotaledger/twin-data-processing/issues/59)) ([e4b6680](https://github.com/iotaledger/twin-data-processing/commit/e4b6680ffae6019b084c00a5ec005acb4cc1df42))
+* release to production [skip ci] ([#66](https://github.com/iotaledger/twin-data-processing/issues/66)) ([7fe9c6f](https://github.com/iotaledger/twin-data-processing/commit/7fe9c6fde2d6ee00346b2a43f1994eff35d6ea0f))
+* release to production [skip ci] ([#67](https://github.com/iotaledger/twin-data-processing/issues/67)) ([065c6db](https://github.com/iotaledger/twin-data-processing/commit/065c6dba917fad3fed6b23a27a9a5fead49cb17f))
+* update dependencies ([21b8e80](https://github.com/iotaledger/twin-data-processing/commit/21b8e8007c87136a09f0a8e35ffde13a07ff4711))
+* use shared store mechanism ([#6](https://github.com/iotaledger/twin-data-processing/issues/6)) ([6009228](https://github.com/iotaledger/twin-data-processing/commit/600922880acef07cc2f818dee7645c342929108b))
+
 ## [0.10.1-next.1](https://github.com/iotaledger/twin-data-processing/compare/data-processing-converters-v0.10.1-next.0...data-processing-converters-v0.10.1-next.1) (2026-09-18)
 
 
