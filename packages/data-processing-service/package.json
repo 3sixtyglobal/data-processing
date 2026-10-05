@@ -4,7 +4,7 @@
 	"description": "Service routes and orchestration logic for extraction and conversion workflows",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/iotaledger/twin-data-processing.git",
+		"url": "git+https://github.com/3sixtyglobal/twin-data-processing.git",
 		"directory": "packages/data-processing-service"
 	},
 	"author": "martyn.janes@iota.org",
@@ -88,7 +88,7 @@
 		"business-logic"
 	],
 	"bugs": {
-		"url": "git+https://github.com/iotaledger/twin-data-processing/issues"
+		"url": "git+https://github.com/3sixtyglobal/twin-data-processing/issues"
 	},
 	"homepage": "https://twindev.org"
 }

@@ -4,7 +4,7 @@
 	"description": "Shared data models and schema definitions for processing pipelines",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/iotaledger/twin-data-processing.git",
+		"url": "git+https://github.com/3sixtyglobal/twin-data-processing.git",
 		"directory": "packages/data-processing-models"
 	},
 	"author": "martyn.janes@iota.org",
@@ -78,7 +78,7 @@
 		"schemas"
 	],
 	"bugs": {
-		"url": "git+https://github.com/iotaledger/twin-data-processing/issues"
+		"url": "git+https://github.com/3sixtyglobal/twin-data-processing/issues"
 	},
 	"homepage": "https://twindev.org"
 }

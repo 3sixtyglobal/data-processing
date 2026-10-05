@@ -4,7 +4,7 @@
 	"description": "REST client for calling data processing service endpoints from applications",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/iotaledger/twin-data-processing.git",
+		"url": "git+https://github.com/3sixtyglobal/twin-data-processing.git",
 		"directory": "packages/data-processing-rest-client"
 	},
 	"author": "martyn.janes@iota.org",
@@ -80,7 +80,7 @@
 		"conversion"
 	],
 	"bugs": {
-		"url": "git+https://github.com/iotaledger/twin-data-processing/issues"
+		"url": "git+https://github.com/3sixtyglobal/twin-data-processing/issues"
 	},
 	"homepage": "https://twindev.org"
 }
