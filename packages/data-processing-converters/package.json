@@ -1,10 +1,10 @@
 {
-	"name": "@twin.org/data-processing-converters",
-	"version": "0.11.1-next.0",
+	"name": "@3sixty/data-processing-converters",
+	"version": "0.20.0-next.0",
 	"description": "Connector implementations that convert source data into canonical processing formats",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/3sixtyglobal/twin-data-processing.git",
+		"url": "git+https://github.com/3sixtyglobal/data-processing.git",
 		"directory": "packages/data-processing-converters"
 	},
 	"author": "martyn.janes@iota.org",
@@ -29,16 +29,16 @@
 		"dist:no-test": "pnpm run clean && concurrently -g -n build,locales,types \"pnpm run build\" \"pnpm run validate-locales\" \"pnpm run test:build\""
 	},
 	"dependencies": {
-		"@twin.org/core": "next",
-		"@twin.org/data-processing-models": "0.11.1-next.0",
-		"@twin.org/nameof": "next",
-		"@twin.org/web": "next",
+		"@3sixty/core": "next",
+		"@3sixty/data-processing-models": "0.20.0-next.0",
+		"@3sixty/nameof": "next",
+		"@3sixty/web": "next",
 		"xml2js": "0.6.2"
 	},
 	"devDependencies": {
-		"@twin.org/nameof-transformer": "next",
-		"@twin.org/nameof-vitest-plugin": "next",
-		"@twin.org/validate-locales": "next",
+		"@3sixty/nameof-transformer": "next",
+		"@3sixty/nameof-vitest-plugin": "next",
+		"@3sixty/validate-locales": "next",
 		"@types/node": "26.6.2",
 		"@types/xml2js": "0.4.14",
 		"@vitest/coverage-v8": "5.0.1",
@@ -81,7 +81,7 @@
 		"conversion"
 	],
 	"bugs": {
-		"url": "git+https://github.com/3sixtyglobal/twin-data-processing/issues"
+		"url": "git+https://github.com/3sixtyglobal/data-processing/issues"
 	},
-	"homepage": "https://twindev.org"
+	"homepage": "https://3sixty.global"
 }

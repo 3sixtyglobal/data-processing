@@ -5,8 +5,8 @@ These snippets show how to inspect supported MIME types and convert common paylo
 ## JsonConverterConnector
 
 ```typescript
-import { Converter } from '@twin.org/core';
-import { JsonConverterConnector } from '@twin.org/data-processing-converters';
+import { Converter } from '@3sixty/core';
+import { JsonConverterConnector } from '@3sixty/data-processing-converters';
 
 const connector = new JsonConverterConnector();
 
@@ -20,7 +20,7 @@ console.log(converted); // { user: { name: 'Asha', active: true } }
 ```
 
 ```typescript
-import { JsonConverterConnector } from '@twin.org/data-processing-converters';
+import { JsonConverterConnector } from '@3sixty/data-processing-converters';
 
 const connector = new JsonConverterConnector();
 const convertedEmpty = await connector.convert(new Uint8Array());
@@ -31,8 +31,8 @@ console.log(convertedEmpty); // {}
 ## XmlConverterConnector
 
 ```typescript
-import { Converter } from '@twin.org/core';
-import { XmlConverterConnector } from '@twin.org/data-processing-converters';
+import { Converter } from '@3sixty/core';
+import { XmlConverterConnector } from '@3sixty/data-processing-converters';
 
 const connector = new XmlConverterConnector();
 
@@ -46,7 +46,7 @@ console.log(converted); // { menu: { food: { name: 'Belgian Waffles' } } }
 ```
 
 ```typescript
-import { XmlConverterConnector } from '@twin.org/data-processing-converters';
+import { XmlConverterConnector } from '@3sixty/data-processing-converters';
 
 const connector = new XmlConverterConnector();
 const convertedEmpty = await connector.convert(new Uint8Array());

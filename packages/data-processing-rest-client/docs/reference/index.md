@@ -1,4 +1,4 @@
-# @twin.org/data-processing-rest-client
+# @3sixty/data-processing-rest-client
 
 ## Classes
 

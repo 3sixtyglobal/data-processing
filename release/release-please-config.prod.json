@@ -8,6 +8,7 @@
 	"release-type": "node",
 	"initial-version": "0.0.1",
 	"versioning": "default",
+	"last-release-sha": "6ec3e7efda55c208dff6bf0c553c619ecdfcef5e",
 	"packages": {
 		"packages/data-processing-models": {
 			"package-name": "data-processing-models",

@@ -1,4 +1,4 @@
-# TWIN Data Processing
+# 3Sixty Data Processing
 
 This repository provides a modular data processing stack for defining data shapes, extracting records from source systems, converting those records into consistent internal models, exposing processing workflows through service endpoints, and integrating with those endpoints through a client library.
 

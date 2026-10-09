@@ -1,6 +1,6 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import type { CoerceType } from "@twin.org/core";
+import type { CoerceType } from "@3sixty/core";
 
 /**
  * Definition for the data to extract.

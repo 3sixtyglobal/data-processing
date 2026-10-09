@@ -6,8 +6,8 @@ import {
 	type INoContentResponse,
 	type IRestRoute,
 	type ITag
-} from "@twin.org/api-models";
-import { Coerce, CoerceType, ComponentFactory, Converter, Guards } from "@twin.org/core";
+} from "@3sixty/api-models";
+import { Coerce, CoerceType, ComponentFactory, Converter, Guards } from "@3sixty/core";
 import type {
 	IDataProcessingComponent,
 	IDataProcessingConvertRequest,
@@ -21,9 +21,9 @@ import type {
 	IDataProcessingRuleGroupRemoveRequest,
 	IDataProcessingRuleGroupSetRequest,
 	IRule
-} from "@twin.org/data-processing-models";
-import { nameof } from "@twin.org/nameof";
-import { HttpStatusCode } from "@twin.org/web";
+} from "@3sixty/data-processing-models";
+import { nameof } from "@3sixty/nameof";
+import { HttpStatusCode } from "@3sixty/web";
 
 /**
  * The source used when communicating about these routes.

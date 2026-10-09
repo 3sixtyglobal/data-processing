@@ -1,4 +1,4 @@
-# @twin.org/data-processing-service
+# @3sixty/data-processing-service
 
 ## Classes
 

@@ -1,11 +1,11 @@
-# TWIN Data Processing Service
+# 3Sixty Data Processing Service
 
 Service routes and orchestration logic for extraction and conversion workflows.
 
 ## Installation
 
 ```shell
-npm install @twin.org/data-processing-service
+npm install @3sixty/data-processing-service
 ```
 
 ## Examples

@@ -5,7 +5,7 @@ Use these snippets to map nested JSON data into flatter, application-focused sha
 ## JsonPathExtractorConnector
 
 ```typescript
-import { JsonPathExtractorConnector } from '@twin.org/data-processing-extractors';
+import { JsonPathExtractorConnector } from '@3sixty/data-processing-extractors';
 
 const extractor = new JsonPathExtractorConnector();
 
@@ -27,7 +27,7 @@ console.log(extracted); // { profile: { givenName: 'John', familyName: 'Doe' } }
 ```
 
 ```typescript
-import { JsonPathExtractorConnector } from '@twin.org/data-processing-extractors';
+import { JsonPathExtractorConnector } from '@3sixty/data-processing-extractors';
 
 const extractor = new JsonPathExtractorConnector();
 
@@ -48,7 +48,7 @@ console.log(extracted); // { bookTitles: ['The Hobbit', '1984', 'Dune'] }
 ```
 
 ```typescript
-import { JsonPathExtractorConnector } from '@twin.org/data-processing-extractors';
+import { JsonPathExtractorConnector } from '@3sixty/data-processing-extractors';
 
 const extractor = new JsonPathExtractorConnector();
 

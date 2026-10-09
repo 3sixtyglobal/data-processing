@@ -1,11 +1,11 @@
-# TWIN Data Processing Converters
+# 3Sixty Data Processing Converters
 
 Connector implementations that convert source data into canonical processing formats.
 
 ## Installation
 
 ```shell
-npm install @twin.org/data-processing-converters
+npm install @3sixty/data-processing-converters
 ```
 
 ## Examples

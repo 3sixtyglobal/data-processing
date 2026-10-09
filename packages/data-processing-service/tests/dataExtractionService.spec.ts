@@ -1,15 +1,15 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import { CoerceType, ObjectHelper } from "@twin.org/core";
-import { JsonConverterConnector } from "@twin.org/data-processing-converters";
-import { JsonPathExtractorConnector } from "@twin.org/data-processing-extractors";
+import { CoerceType, ObjectHelper } from "@3sixty/core";
+import { JsonConverterConnector } from "@3sixty/data-processing-converters";
+import { JsonPathExtractorConnector } from "@3sixty/data-processing-extractors";
 import {
 	DataConverterConnectorFactory,
 	DataExtractorConnectorFactory
-} from "@twin.org/data-processing-models";
-import { MemoryEntityStorageConnector } from "@twin.org/entity-storage-connector-memory";
-import { EntityStorageConnectorFactory } from "@twin.org/entity-storage-models";
-import { nameof } from "@twin.org/nameof";
+} from "@3sixty/data-processing-models";
+import { MemoryEntityStorageConnector } from "@3sixty/entity-storage-connector-memory";
+import { EntityStorageConnectorFactory } from "@3sixty/entity-storage-models";
+import { nameof } from "@3sixty/nameof";
 import { DataProcessingService } from "../src/dataProcessingService.js";
 import type { ExtractionRuleGroup } from "../src/entities/extractionRuleGroup.js";
 import { initSchema } from "../src/schema.js";

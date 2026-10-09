@@ -5,21 +5,21 @@ These examples show how to configure the service, manage rule groups, and proces
 ## DataProcessingService
 
 ```typescript
-import { JsonConverterConnector } from '@twin.org/data-processing-converters';
-import { JsonPathExtractorConnector } from '@twin.org/data-processing-extractors';
+import { JsonConverterConnector } from '@3sixty/data-processing-converters';
+import { JsonPathExtractorConnector } from '@3sixty/data-processing-extractors';
 import {
   DataConverterConnectorFactory,
   DataExtractorConnectorFactory,
   type IRuleGroup
-} from '@twin.org/data-processing-models';
-import { MemoryEntityStorageConnector } from '@twin.org/entity-storage-connector-memory';
-import { EntityStorageConnectorFactory } from '@twin.org/entity-storage-models';
-import { nameof } from '@twin.org/nameof';
+} from '@3sixty/data-processing-models';
+import { MemoryEntityStorageConnector } from '@3sixty/entity-storage-connector-memory';
+import { EntityStorageConnectorFactory } from '@3sixty/entity-storage-models';
+import { nameof } from '@3sixty/nameof';
 import {
   DataProcessingService,
   type ExtractionRuleGroup,
   initSchema
-} from '@twin.org/data-processing-service';
+} from '@3sixty/data-processing-service';
 
 initSchema();
 
@@ -51,8 +51,8 @@ console.log(loaded.label); // Customer Overview
 ```
 
 ```typescript
-import { ObjectHelper } from '@twin.org/core';
-import { DataProcessingService } from '@twin.org/data-processing-service';
+import { ObjectHelper } from '@3sixty/core';
+import { DataProcessingService } from '@3sixty/data-processing-service';
 
 const service = new DataProcessingService({ defaultExtractorType: 'JSONPath' });
 
@@ -77,8 +77,8 @@ await service.ruleGroupRemove('customer-overview');
 ## ExtractionRuleGroup
 
 ```typescript
-import { CoerceType } from '@twin.org/core';
-import { ExtractionRuleGroup } from '@twin.org/data-processing-service';
+import { CoerceType } from '@3sixty/core';
+import { ExtractionRuleGroup } from '@3sixty/data-processing-service';
 
 const group = new ExtractionRuleGroup();
 group.id = 'analytics-group';
@@ -98,8 +98,8 @@ console.log(group.label); // Analytics Group
 ## ExtractionRule
 
 ```typescript
-import { CoerceType } from '@twin.org/core';
-import { ExtractionRule } from '@twin.org/data-processing-service';
+import { CoerceType } from '@3sixty/core';
+import { ExtractionRule } from '@3sixty/data-processing-service';
 
 const rule = new ExtractionRule();
 rule.source = '$.orders[*].id';

@@ -5,9 +5,9 @@ These snippets show how to connect to a running service, maintain rule groups, a
 ## DataProcessingRestClient
 
 ```typescript
-import { ObjectHelper } from '@twin.org/core';
-import type { IRuleGroup } from '@twin.org/data-processing-models';
-import { DataProcessingRestClient } from '@twin.org/data-processing-rest-client';
+import { ObjectHelper } from '@3sixty/core';
+import type { IRuleGroup } from '@3sixty/data-processing-models';
+import { DataProcessingRestClient } from '@3sixty/data-processing-rest-client';
 
 const client = new DataProcessingRestClient({ endpoint: 'http://localhost:8080' });
 
@@ -29,8 +29,8 @@ console.log(saved); // { id: 'orders-summary', label: 'Orders Summary', rules: [
 ```
 
 ```typescript
-import { ObjectHelper } from '@twin.org/core';
-import { DataProcessingRestClient } from '@twin.org/data-processing-rest-client';
+import { ObjectHelper } from '@3sixty/core';
+import { DataProcessingRestClient } from '@3sixty/data-processing-rest-client';
 
 const client = new DataProcessingRestClient({ endpoint: 'http://localhost:8080' });
 
@@ -49,7 +49,7 @@ console.log(converted); // { orders: [ { id: 'A-100', total: 19.99 }, { id: 'A-1
 ```
 
 ```typescript
-import { DataProcessingRestClient } from '@twin.org/data-processing-rest-client';
+import { DataProcessingRestClient } from '@3sixty/data-processing-rest-client';
 
 const client = new DataProcessingRestClient({ endpoint: 'http://localhost:8080' });
 

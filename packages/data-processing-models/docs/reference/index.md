@@ -1,4 +1,4 @@
-# @twin.org/data-processing-models
+# @3sixty/data-processing-models
 
 ## Interfaces
 

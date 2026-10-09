@@ -1,7 +1,7 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 import { readFile } from "node:fs/promises";
-import { Converter } from "@twin.org/core";
+import { Converter } from "@3sixty/core";
 import { XmlConverterConnector } from "../../src/converters/xmlConverterConnector.js";
 
 describe("XmlConverterConnector", () => {

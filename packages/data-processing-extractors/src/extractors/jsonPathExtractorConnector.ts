@@ -1,9 +1,9 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import { BaseError, Coerce, GeneralError, Guards, Is, ObjectHelper } from "@twin.org/core";
-import { JsonPathHelper } from "@twin.org/data-json-path";
-import type { IDataExtractorConnector, IRule } from "@twin.org/data-processing-models";
-import { nameof } from "@twin.org/nameof";
+import { BaseError, Coerce, GeneralError, Guards, Is, ObjectHelper } from "@3sixty/core";
+import { JsonPathHelper } from "@3sixty/data-json-path";
+import type { IDataExtractorConnector, IRule } from "@3sixty/data-processing-models";
+import { nameof } from "@3sixty/nameof";
 
 /**
  * Class for extracting data from a JSON source.

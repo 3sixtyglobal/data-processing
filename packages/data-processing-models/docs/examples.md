@@ -5,8 +5,8 @@ These examples focus on registering and resolving connector implementations so p
 ## DataConverterConnectorFactory
 
 ```typescript
-import { JsonConverterConnector } from '@twin.org/data-processing-converters';
-import { DataConverterConnectorFactory } from '@twin.org/data-processing-models';
+import { JsonConverterConnector } from '@3sixty/data-processing-converters';
+import { DataConverterConnectorFactory } from '@3sixty/data-processing-models';
 
 DataConverterConnectorFactory.register('json', () => new JsonConverterConnector());
 
@@ -22,8 +22,8 @@ console.log(converterInstances.length); // 1
 ## DataExtractorConnectorFactory
 
 ```typescript
-import { JsonPathExtractorConnector } from '@twin.org/data-processing-extractors';
-import { DataExtractorConnectorFactory } from '@twin.org/data-processing-models';
+import { JsonPathExtractorConnector } from '@3sixty/data-processing-extractors';
+import { DataExtractorConnectorFactory } from '@3sixty/data-processing-models';
 
 DataExtractorConnectorFactory.register('JSONPath', () => new JsonPathExtractorConnector());
 

@@ -1,11 +1,11 @@
-# TWIN Data Processing REST Client
+# 3Sixty Data Processing REST Client
 
 REST client for calling data processing service endpoints from applications.
 
 ## Installation
 
 ```shell
-npm install @twin.org/data-processing-rest-client
+npm install @3sixty/data-processing-rest-client
 ```
 
 ## Examples

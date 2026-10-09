@@ -1,6 +1,6 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import { GeneralError, Guards, Is, NotFoundError, ObjectHelper } from "@twin.org/core";
+import { GeneralError, Guards, Is, NotFoundError, ObjectHelper } from "@3sixty/core";
 import {
 	DataConverterConnectorFactory,
 	DataExtractorConnectorFactory,
@@ -8,14 +8,14 @@ import {
 	type IDataProcessingComponent,
 	type IRule,
 	type IRuleGroup
-} from "@twin.org/data-processing-models";
-import { SortDirection } from "@twin.org/entity";
+} from "@3sixty/data-processing-models";
+import { SortDirection } from "@3sixty/entity";
 import {
 	EntityStorageConnectorFactory,
 	type IEntityStorageConnector
-} from "@twin.org/entity-storage-models";
-import { nameof } from "@twin.org/nameof";
-import { MimeTypeHelper } from "@twin.org/web";
+} from "@3sixty/entity-storage-models";
+import { nameof } from "@3sixty/nameof";
+import { MimeTypeHelper } from "@3sixty/web";
 import type { ExtractionRuleGroup } from "./entities/extractionRuleGroup.js";
 import type { IDataProcessingServiceConstructorOptions } from "./models/IDataProcessingServiceConstructorOptions.js";
 

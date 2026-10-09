@@ -1,11 +1,11 @@
-# TWIN Data Processing Extractors
+# 3Sixty Data Processing Extractors
 
 Connector implementations that extract data from external systems for processing.
 
 ## Installation
 
 ```shell
-npm install @twin.org/data-processing-extractors
+npm install @3sixty/data-processing-extractors
 ```
 
 ## Examples

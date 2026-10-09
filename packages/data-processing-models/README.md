@@ -1,11 +1,11 @@
-# TWIN Data Processing Models
+# 3Sixty Data Processing Models
 
 Shared data models and schema definitions for processing pipelines.
 
 ## Installation
 
 ```shell
-npm install @twin.org/data-processing-models
+npm install @3sixty/data-processing-models
 ```
 
 ## Examples
