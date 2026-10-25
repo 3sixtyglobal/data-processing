@@ -1,4 +1,5 @@
 // Copyright 2024 IOTA Stiftung.
+// Copyright 2026 3Sixty Trade Ltd.
 // SPDX-License-Identifier: Apache-2.0.
 import { readFile } from "node:fs/promises";
 import { Converter } from "@3sixty/core";
@@ -7,10 +8,18 @@ import { JsonConverterConnector } from "../../src/converters/jsonConverterConnec
 describe("JsonConverterConnector", () => {
 	test("Can fail when input is invalid JSON", async () => {
 		const converter = new JsonConverterConnector();
+		// The parse error message differs between JavaScript engines
+		let expectedFailure = "";
+		try {
+			JSON.parse("!");
+		} catch (error) {
+			expectedFailure = (error as Error).message;
+		}
+		expect(expectedFailure.length).toBeGreaterThan(0);
 		await expect(converter.convert(Converter.utf8ToBytes("!"))).rejects.toMatchObject({
 			name: "GeneralError",
 			message: "jsonConverterConnector.invalidFormat",
-			properties: { failure: "Unexpected token '!', \"!\" is not valid JSON" }
+			properties: { failure: expectedFailure }
 		});
 	});
 
