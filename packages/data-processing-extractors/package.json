@@ -1,6 +1,6 @@
 {
 	"name": "@3sixty/data-processing-extractors",
-	"version": "0.20.0-next.1",
+	"version": "0.20.0-next.2",
 	"description": "Connector implementations that extract data from external systems for processing",
 	"repository": {
 		"type": "git",
@@ -33,7 +33,7 @@
 	"dependencies": {
 		"@3sixty/core": "next",
 		"@3sixty/data-json-path": "next",
-		"@3sixty/data-processing-models": "0.20.0-next.1",
+		"@3sixty/data-processing-models": "0.20.0-next.2",
 		"@3sixty/nameof": "next"
 	},
 	"devDependencies": {

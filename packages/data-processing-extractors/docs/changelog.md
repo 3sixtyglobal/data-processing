@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.20.0-next.2](https://github.com/3sixtyglobal/data-processing/compare/data-processing-extractors-v0.20.0-next.1...data-processing-extractors-v0.20.0-next.2) (2026-10-26)
+
+
+### Features
+
+* release to next [skip ci] ([#6](https://github.com/3sixtyglobal/data-processing/issues/6)) ([061cb01](https://github.com/3sixtyglobal/data-processing/commit/061cb0146baf5f6ea806d6ce58869b2eadc37223))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @3sixty/data-processing-models bumped from 0.20.0-next.1 to 0.20.0-next.2
+
 ## [0.20.0-next.1](https://github.com/3sixtyglobal/data-processing/compare/data-processing-extractors-v0.20.0-next.0...data-processing-extractors-v0.20.0-next.1) (2026-10-23)
 
 
