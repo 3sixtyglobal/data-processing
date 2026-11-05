@@ -10,6 +10,7 @@ import {
 import { MemoryEntityStorageConnector } from "@3sixty/entity-storage-connector-memory";
 import { EntityStorageConnectorFactory } from "@3sixty/entity-storage-models";
 import { nameof } from "@3sixty/nameof";
+import { MimeTypes } from "@3sixty/web";
 import { DataProcessingService } from "../src/dataProcessingService.js";
 import type { ExtractionRuleGroup } from "../src/entities/extractionRuleGroup.js";
 import { initSchema } from "../src/schema.js";
@@ -65,7 +66,7 @@ describe("DataProcessingService", () => {
 			name: "NotFoundError",
 			message: "dataProcessingService.converterNotFound",
 			properties: {
-				notFoundId: "text/plain"
+				notFoundId: MimeTypes.PlainText
 			}
 		});
 	});

@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0.
 import { Converter, GuardError } from "@3sixty/core";
 import type { IRuleGroup } from "@3sixty/data-processing-models";
-import { HttpMethod } from "@3sixty/web";
+import { HttpMethod, MimeTypes } from "@3sixty/web";
 import { DataProcessingRestClient } from "../src/dataProcessingRestClient.js";
 import {
 	jsonResponse,
@@ -257,11 +257,11 @@ describe("DataProcessingRestClient", () => {
 		test("includes overrideMimeType in the request body when provided", async () => {
 			fetchMock.mockResolvedValueOnce(jsonResponse(TEST_CONVERT_RESPONSE));
 
-			await client.convert(TEST_DATA, "application/pdf");
+			await client.convert(TEST_DATA, MimeTypes.Pdf);
 
 			const [, options] = fetchMock.mock.calls[0];
 			const body = JSON.parse(options.body);
-			expect(body.overrideMimeType).toBe("application/pdf");
+			expect(body.overrideMimeType).toBe(MimeTypes.Pdf);
 		});
 
 		test("returns the converted data from the response", async () => {

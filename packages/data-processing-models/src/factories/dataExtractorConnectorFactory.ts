@@ -6,6 +6,5 @@ import type { IDataExtractorConnector } from "../models/IDataExtractorConnector.
 /**
  * Factory for creating data extractor connectors.
  */
-// eslint-disable-next-line @typescript-eslint/naming-convention
 export const DataExtractorConnectorFactory =
 	Factory.createFactory<IDataExtractorConnector>("data-extractor");
